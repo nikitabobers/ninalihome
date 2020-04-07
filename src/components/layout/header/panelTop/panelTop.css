@@ -1,0 +1,15 @@
+.panel {
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--width-max);
+    margin: auto;
+    padding: 0.5rem 0;
+}
+.panel__item-flex {
+    display: flex;
+}
+.panel__item-flex p,
+span {
+    margin-left: 1rem;
+}

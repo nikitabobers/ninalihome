@@ -1,0 +1,15 @@
+.header {
+    background: #fff;
+    border-bottom: 1px solid var(--color-grey);
+}
+.header__bottom-window {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--width-max);
+    margin: auto;
+    min-height: 60px;
+}
+.header__top-window {
+    border-bottom: 1px solid var(--color-grey);
+}

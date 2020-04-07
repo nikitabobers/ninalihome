@@ -1,0 +1,6 @@
+.profile__menu {
+    display: flex;
+}
+.profile__item {
+    margin-left: 1.5rem;
+}
