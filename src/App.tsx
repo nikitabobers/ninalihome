@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./components/pages/Home";
-import About from "./components/pages/About";
 import Header from "./components/layout/header/Header";
-import Contact from "./components/pages/Contact";
-import Blog from "./components/pages/Blog";
+import Home from "./components/pages/home/Home";
+import Shop from "./components/pages/shop/Shop";
+import About from "./components/pages/about/About";
+import Blog from "./components/pages/blog/Blog";
+import Contact from "./components/pages/contact/Contact";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <Header />
             <Switch>
                 <Route exact path="/" component={Home} />
+                <Route exact path="/shop" component={Shop} />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/blog" component={Blog} />
                 <Route exact path="/contact" component={Contact} />

@@ -9,7 +9,7 @@ const PanelTop = () => {
                 <span>Shipping to Denmark</span>
             </div>
             <div className="panel__item-flex">
-                <small>en</small>
+                <p>EN</p>
                 <p>Login</p>
             </div>
         </div>

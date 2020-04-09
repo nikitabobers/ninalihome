@@ -1,0 +1,10 @@
+.btn {
+    border: none;
+    background: transparent;
+}
+.btn-shop {
+    color: #333;
+    font-size: 1rem;
+    text-decoration: underline;
+    font-weight: 700;
+}

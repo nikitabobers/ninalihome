@@ -4,7 +4,8 @@
 .navbar__item {
     margin-left: 3rem;
 }
-a {
+
+nav ul li a {
     color: #333;
     padding: 0 10px 10px 10px;
 }

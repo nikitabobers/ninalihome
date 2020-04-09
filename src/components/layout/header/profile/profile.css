@@ -2,5 +2,14 @@
     display: flex;
 }
 .profile__item {
-    margin-left: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+}
+.profile__item i {
+    cursor: pointer;
+    color: #333;
+    padding: 9px 7px;
+    border-radius: 50%;
 }
