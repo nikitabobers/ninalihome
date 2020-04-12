@@ -1,0 +1,23 @@
+.section__three {
+    min-height: 300px;
+    /* background: #f4f4f4; */
+    margin: 5rem 0;
+}
+.section__three--grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+.section__three-item {
+    position: relative;
+    margin: 2rem 0;
+    height: 700px;
+    width: 100%;
+    background: green;
+    text-align: center;
+}
+.section__three--text {
+    position: absolute;
+    bottom: 3rem;
+    left: 45%;
+}

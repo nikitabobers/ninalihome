@@ -8,3 +8,6 @@
     text-decoration: underline;
     font-weight: 700;
 }
+.btn-shop a:hover {
+    color: #444;
+}

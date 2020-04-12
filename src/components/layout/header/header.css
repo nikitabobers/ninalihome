@@ -1,15 +1,22 @@
 .header {
+    position: relative;
     background: #fff;
-    border-bottom: 1px solid var(--color-grey);
+    width: 100%;
 }
 .header__bottom-window {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: var(--width-max);
     margin: auto;
     min-height: 60px;
 }
-.header__top-window {
+/* .header__top-window {
     border-bottom: 1px solid var(--color-grey);
+} */
+hr {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    border: 0.5px solid var(--color-grey);
+    z-index: 5;
 }

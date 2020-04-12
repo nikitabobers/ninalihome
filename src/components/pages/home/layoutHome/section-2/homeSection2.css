@@ -1,5 +1,19 @@
 .section__two {
-    min-height: 400px;
-    background: #f4f4f4;
-    margin-bottom: 1rem;
+    margin: 5rem auto;
+    position: relative;
+}
+
+.section__two--grid {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid__item {
+    background: red;
+    height: 500px;
+    width: 330px;
+}
+.section__two--text {
+    padding-left: 5rem;
+    font-size: 1.5rem;
 }

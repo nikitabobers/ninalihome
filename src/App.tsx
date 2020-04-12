@@ -6,6 +6,7 @@ import Shop from "./components/pages/shop/Shop";
 import About from "./components/pages/about/About";
 import Blog from "./components/pages/blog/Blog";
 import Contact from "./components/pages/contact/Contact";
+import Footer from "./components/layout/footer/Footer";
 
 function App() {
     return (
@@ -18,28 +19,9 @@ function App() {
                 <Route exact path="/blog" component={Blog} />
                 <Route exact path="/contact" component={Contact} />
             </Switch>
+            <Footer />
         </Router>
     );
 }
 
 export default App;
-
-// import React from "react";
-// import "./panelTop.css";
-
-// const PanelTop = () => {
-//     return (
-//         <div className="panel">
-//             <div className="panel__item">
-//                 <i className="fas fa-map-marker-alt"></i>
-//                 <span>Shipping to Denmark</span>
-//             </div>
-//             <div className="panel__item-flex">
-//                 <small>en</small>
-//                 <p>Login</p>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default PanelTop;

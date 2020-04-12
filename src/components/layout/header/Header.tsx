@@ -8,11 +8,15 @@ import "./header.css";
 const Header = () => {
     return (
         <div className="header">
-            <div className="header__top-window">{<PanelTop />}</div>
-            <div className="header__bottom-window">
-                <div className="header__logo">Ninali home</div>
-                <Navbar />
-                <Profile />
+            <div className="container">
+                <div className="header__top-window">{<PanelTop />}</div>
+                <hr />
+                <div className="header__bottom-window">
+                    <div className="header__logo">Ninali home</div>
+                    <Navbar />
+                    <Profile />
+                </div>
+                <hr />
             </div>
         </div>
     );

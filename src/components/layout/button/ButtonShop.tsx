@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import "./button.css";
 
 type Address = {
-    address: string;
+    path: string;
 };
 
-const ButtonShop = ({ address }: Address) => {
+const ButtonShop = ({ path }: Address) => {
     return (
         <button className="btn btn-shop">
-            <Link to={address}>Shop now</Link>
+            <Link to={path}>Shop now</Link>
         </button>
     );
 };
