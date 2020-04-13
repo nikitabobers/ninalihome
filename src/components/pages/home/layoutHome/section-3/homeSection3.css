@@ -1,7 +1,8 @@
 .section__three {
     min-height: 300px;
-    /* background: #f4f4f4; */
+    background: var(--color-grey);
     margin: 5rem 0;
+    padding: 2rem 0;
 }
 .section__three--grid {
     display: grid;
@@ -10,14 +11,14 @@
 }
 .section__three-item {
     position: relative;
-    margin: 2rem 0;
     height: 700px;
     width: 100%;
     background: green;
     text-align: center;
 }
 .section__three--text {
+    text-align: center;
     position: absolute;
     bottom: 3rem;
-    left: 45%;
+    width: 100%;
 }

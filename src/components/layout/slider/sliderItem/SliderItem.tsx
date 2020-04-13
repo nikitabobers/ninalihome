@@ -1,10 +1,11 @@
 import React from "react";
 import "./sliderItem.css";
+import ButtonShop from "../../button/ButtonShop";
 
 const SliderItem = () => {
     return (
         <div className="slider__item">
-            <h1>test</h1>
+            <ButtonShop path="/shop" />
         </div>
     );
 };

@@ -1,13 +1,26 @@
 import React from "react";
+import ButtonShop from "../../../../layout/button/ButtonShop";
 import "./homeSection4.css";
-import Slider from "../../../../layout/slider/Slider";
 
 const HomeSection4 = () => {
     return (
         <div className="section__four">
-            <div className="container">
-                <Slider />
-                {/* <div className="section__four-item">a</div> */}
+            <div className="section__four--grid container">
+                <div className="section__four-item">
+                    <div className="section__four--text">
+                        <ButtonShop path="/shop" />
+                    </div>
+                </div>
+                <div className="section__four-item">
+                    <div className="section__four--text">
+                        <ButtonShop path="/shop" />
+                    </div>
+                </div>
+                <div className="section__four-item">
+                    <div className="section__four--text">
+                        <ButtonShop path="/shop" />
+                    </div>
+                </div>
             </div>
         </div>
     );

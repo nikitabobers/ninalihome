@@ -1,5 +1,5 @@
 .section__one {
-    background: #f4f4f4;
+    background: var(--color-grey);
 }
 .section__one--img {
     width: 100%;
