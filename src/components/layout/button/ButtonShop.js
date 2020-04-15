@@ -2,11 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./button.css";
 
-type Address = {
-    path: string;
-};
-
-const ButtonShop = ({ path }: Address) => {
+const ButtonShop = ({ path }) => {
     return (
         <button className="btn btn-shop">
             <Link to={path}>Shop now</Link>

@@ -1,8 +1,8 @@
 .slider__item {
     position: relative;
-    height: 400px;
-    width: 100%;
-    background: red;
+    height: 450px;
+    width: 385px;
+    background: grey;
 }
 .slider__item button {
     text-align: center;

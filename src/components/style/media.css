@@ -1,6 +1,11 @@
 @media (max-width: 1280px) {
     .container {
         background: greenyellow;
-        /* max-width: 1400px; */
+    }
+}
+@media (max-width: 1700px) {
+    .slider .slider__item {
+        width: 340px;
+        /* background: gainsboro; */
     }
 }
