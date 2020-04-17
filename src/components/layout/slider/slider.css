@@ -4,10 +4,10 @@
 }
 
 .slider {
-    /* width: 3000px; */
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-gap: 2rem;
+    transition: all 200ms ease;
 }
 
 .slider__btn-left,
