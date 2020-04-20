@@ -1,10 +1,9 @@
 import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import SliderItem from "./sliderItem/SliderItem";
-import useBeforeFirstRender from "./beforeRender";
 import "./slider.css";
 
 const Slider = () => {
-    const margin = 20;
+    const margin = 0;
     const sliderWidth = useRef();
     const data = [
         { id: 1, name: "" },
@@ -19,7 +18,7 @@ const Slider = () => {
     const initialState = {
         items: 0,
         totalItems: data,
-        itemWidth: 385,
+        itemWidth: 0,
         margin: "",
     };
     const [slider, setSlider] = useState(initialState);
@@ -61,6 +60,8 @@ const Slider = () => {
         e.preventDefault();
         setStep(step - slider.itemWidth);
         setSlider({ ...slider, margin: `${margin + step}` });
+        console.log(slider);
+        console.log(step);
     };
 
     const clickLeft = (e) => {
@@ -72,8 +73,9 @@ const Slider = () => {
     // Calculate each item width
     const resizeWidth = () => {
         const width = sliderWidth.current.offsetWidth;
-        const calc = width / slider.items - margin;
+        const calc = width / slider.items - 20;
         setSlider({ ...slider, itemWidth: calc });
+        console.log(width);
     };
 
     // Calculate total amount of items to display, depended on screen width
