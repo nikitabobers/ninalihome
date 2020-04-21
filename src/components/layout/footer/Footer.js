@@ -7,10 +7,10 @@ const Footer = () => {
         <div className="footer">
             <div className="container">
                 <div className="footer__grid">
-                    <div className="footer__item">
+                    <div className="footer__item footer__item-contact">
                         <h4 className="footer__title">Get In Touch</h4>
                         <p>Contact Us if you are having some issues or questions:</p>
-                        <p className="footer__contact">
+                        <p className="footer__contact-email">
                             <Link to="/contact">contact@ninalihome.com</Link>
                         </p>
                     </div>
@@ -18,22 +18,34 @@ const Footer = () => {
                         <h4 className="footer__title">Follow Us</h4>
                         <ul className="footer__list">
                             <li className="footer__list--social">
-                                <Link to="/contact">
+                                <a
+                                    href="https://www.instagram.com/ninalihome/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                >
                                     <i className="fab fa-instagram"></i>
                                     <p>Instagram</p>
-                                </Link>
+                                </a>
                             </li>
                             <li className="footer__list--social">
-                                <Link to="/contact">
+                                <a
+                                    href="https://www.facebook.com/ninalihome/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                >
                                     <i className="fab fa-facebook-square"></i>
                                     <p>Facebook</p>
-                                </Link>
+                                </a>
                             </li>
                             <li className="footer__list--social">
-                                <Link to="/contact">
+                                <a
+                                    href="https://www.instagram.com/ninalihome/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                >
                                     <i className="fab fa-pinterest-square"></i>
                                     <p>Pinterest</p>
-                                </Link>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -47,7 +59,7 @@ const Footer = () => {
                                 <Link to="/blog">Blog</Link>
                             </li>
                             <li>
-                                <Link to="/contact">Affiliate Program</Link>
+                                <Link to="/notfound">Affiliate Program</Link>
                             </li>
                         </ul>
                     </div>
@@ -55,13 +67,13 @@ const Footer = () => {
                         <h4 className="footer__title">Customer Service</h4>
                         <ul className="footer__list">
                             <li>
-                                <Link to="/about">Help</Link>
+                                <Link to="/notfound">Help</Link>
                             </li>
                             <li>
-                                <Link to="/about">Shipping information</Link>
+                                <Link to="/notfound">Shipping information</Link>
                             </li>
                             <li>
-                                <Link to="/about">Return Policy</Link>
+                                <Link to="/notfound">Return Policy</Link>
                             </li>
                         </ul>
                     </div>

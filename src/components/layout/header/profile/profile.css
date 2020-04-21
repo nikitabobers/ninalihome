@@ -13,3 +13,6 @@
     padding: 9px 7px;
     border-radius: 50%;
 }
+.profile__item i:hover {
+    background: var(--color-hover-grey-light);
+}

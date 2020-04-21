@@ -1,24 +1,29 @@
 .footer {
     background: black;
     color: #fff;
-    width: 100%;
-    /* min-height: 300px; */
     padding: 3rem 0 1.5rem 0;
 }
+
 .footer a {
     color: #fff;
 }
 .footer a:hover {
-    color: red;
+    color: var(--color-hover-white);
 }
+
 .footer hr {
     border: 0.5px solid #333;
 }
 .footer__grid {
+    width: 90%;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 2rem;
     margin-bottom: 2rem;
+}
+.footer__item-contact {
+    grid-column: 1 / span 2;
 }
 .footer__item {
     line-height: 2rem;
@@ -40,7 +45,7 @@
     padding-right: 0.5rem;
 }
 
-.footer__contact {
+.footer__contact-email {
     font-weight: 700;
     text-decoration: underline;
 }
