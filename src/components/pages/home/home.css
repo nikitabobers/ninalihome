@@ -1,20 +1,19 @@
 .section {
-    position: relative;
-    min-height: 300px;
+  position: relative;
+  min-height: 300px;
 }
 .section--flex {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    /* justify-content: space-between; */
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
 .section p {
-    margin-bottom: 0.2rem;
+  margin-bottom: 0.2rem;
 }
 .section__title {
-    font-size: 1.4rem;
-    margin-bottom: 0.2rem;
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
 }
 .bg-home {
-    background: #f4f4f4;
+  background: #f4f4f4;
 }

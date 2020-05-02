@@ -1,0 +1,25 @@
+.list-item {
+  height: 450px;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+.list-item__image {
+  margin: auto;
+  background: red;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.item-info {
+  line-height: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.info-color,
+.info-status {
+  font-size: 0.9rem;
+  color: #777;
+}
+.info-name {
+  /* font-size: ; */
+}
