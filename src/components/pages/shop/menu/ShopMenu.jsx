@@ -1,10 +1,11 @@
 import React from "react";
+import DropDown from "../../../layout/dropDown/DropDown.jsx";
 import "./shopMenu.css";
 
 const ShopMenu = () => {
   return (
     <div className="shop-menu">
-      <h4>Shop Categories</h4>
+      <DropDown />
     </div>
   );
 };

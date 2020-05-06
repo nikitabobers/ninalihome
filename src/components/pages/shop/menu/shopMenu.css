@@ -1,5 +1,16 @@
 .shop-menu {
   min-height: 80px;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
   border-bottom: 1px solid var(--color-grey);
   margin-bottom: 1rem;
+}
+.menu-select{
+	outline: none;
+	height: 50px;
+	font-size:1rem;
+	background: #fff;
+	border: none;
+	padding:.5rem;
 }
