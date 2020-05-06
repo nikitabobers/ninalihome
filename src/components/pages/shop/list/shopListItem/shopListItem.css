@@ -4,8 +4,8 @@
   margin-bottom: 4rem;
 }
 .list-item__image {
+  border: 1px solid #999;
   margin: auto;
-  background: red;
   height: 100%;
   width: 100%;
   margin-bottom: 1rem;
@@ -19,7 +19,4 @@
 .info-status {
   font-size: 0.9rem;
   color: #777;
-}
-.info-name {
-  /* font-size: ; */
 }
