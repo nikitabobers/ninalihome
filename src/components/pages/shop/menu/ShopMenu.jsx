@@ -24,11 +24,34 @@ const ShopMenu = () => {
         key: "categories",
       },
     ],
+    colors: [
+      {
+        id: 0,
+        title: "Black",
+        selected: false,
+        key: "colors",
+      },
+      {
+        id: 1,
+        title: "White",
+        selected: false,
+        key: "colors",
+      },
+      {
+        id: 2,
+        title: "Purple",
+        selected: false,
+        key: "colors",
+      },
+    ],
   };
 
   return (
     <div className="shop-menu">
-      <DropDown title="Categories" list={data.categories} />
+      <div className="shop-menu__items">
+        <DropDown title="Categories" list={data.categories} />
+        <DropDown title="Colors" list={data.colors} />
+      </div>
     </div>
   );
 };

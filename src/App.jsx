@@ -10,20 +10,20 @@ import Footer from "./components/layout/footer/Footer";
 import PageNotFound from "./components/pages/notFound/PageNotFound";
 
 function App() {
-    return (
-        <Router>
-            <Header />
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/shop" component={Shop} />
-                <Route exact path="/about" component={About} />
-                <Route exact path="/blog" component={Blog} />
-                <Route exact path="/notfound" component={PageNotFound} />
-                <Route exact path="/contact" component={Contact} />
-            </Switch>
-            <Footer />
-        </Router>
-    );
+  return (
+    <Router>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/shop" component={Shop} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/blog" component={Blog} />
+        <Route exact path="/notfound" component={PageNotFound} />
+        <Route exact path="/contact" component={Contact} />
+      </Switch>
+      <Footer />
+    </Router>
+  );
 }
 
 export default App;

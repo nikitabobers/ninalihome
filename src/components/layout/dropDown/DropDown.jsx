@@ -11,6 +11,7 @@ const DropDown = ({ title, list }) => {
   const [state, setState] = useState(initialState);
 
   const toggleList = () => {
+    wrapperRef.current.classList.toggle("dd-open");
     setState((prevState) => ({
       listOpen: !prevState.listOpen,
       headerTitle: title,
@@ -19,6 +20,7 @@ const DropDown = ({ title, list }) => {
 
   const handleClickOutside = (event) => {
     if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+      wrapperRef.current.classList.remove("dd-open");
       setState({
         listOpen: false,
         headerTitle: title,
@@ -41,11 +43,7 @@ const DropDown = ({ title, list }) => {
     <div className="dd-wrapper" ref={wrapperRef}>
       <div className="dd-header" onClick={() => toggleList()}>
         <div className="dd-header-title">{headerTitle}</div>
-        {listOpen ? (
-          <FontAwesome name="angle-up" size="lg" />
-        ) : (
-          <FontAwesome name="angle-down" size="lg" />
-        )}
+        <FontAwesome name="angle-down" size="sm" />
       </div>
       {listOpen && (
         <ul className="dd-list">
