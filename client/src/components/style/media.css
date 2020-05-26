@@ -1,0 +1,15 @@
+/* @media (max-width: 400px) {
+  .shop-list {
+    background: red;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
+}
+@media (max-width: 1280px) {
+}
+@media (max-width: 1700px) {
+  .slider .slider__item {
+    width: 340px;
+  }
+} */

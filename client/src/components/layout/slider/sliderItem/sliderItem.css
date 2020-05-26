@@ -1,0 +1,14 @@
+.slider__item {
+  display: block;
+  position: relative;
+  height: 450px;
+  /* width: 200px; */
+  /* margin: 0 10px; */
+  background: grey;
+}
+.slider__item button {
+  text-align: center;
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+}
