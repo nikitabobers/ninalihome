@@ -10,7 +10,6 @@ const PanelTop = () => {
             </div>
             <div className="panel__item-flex">
                 <p>EN</p>
-                <p>Login</p>
             </div>
         </div>
     );
