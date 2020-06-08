@@ -6,7 +6,6 @@ import "./shop.css";
 const Shop = () => {
   return (
     <div className="container">
-      <div>Top</div>
       <div className="shop-section">
         <ShopMenu />
         <ShopList />
