@@ -1,23 +1,24 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useEffect } from "react";
 import ShopListItem from "./shopListItem/ShopListItem";
+import { useSelector, useDispatch } from "react-redux";
+import { listProducts } from "../../../../actions/productActions";
+import { Loader } from "../../../layout/loader/Loader";
 import "./shopList.css";
 
 const ShopList = () => {
-  const [products, setProduct] = useState([]);
+  const productList = useSelector((state) => state.productList);
+
+  const { products, loading } = productList;
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const fetchData = async () => {
-      const { data } = await axios.get("/api/products");
-
-      setProduct(data);
-      console.log(data);
-    };
-
-    fetchData();
+    dispatch(listProducts());
   }, []);
 
-  return (
+  return loading ? (
+    <Loader />
+  ) : (
     <div className="shop-list">
       {products.map((item) => (
         <ShopListItem
@@ -25,6 +26,7 @@ const ShopList = () => {
           id={item.id}
           width={item.itemWidth}
           name={item.name}
+          images={item.images}
           price={item.price}
         />
       ))}

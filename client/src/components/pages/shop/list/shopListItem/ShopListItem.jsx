@@ -1,12 +1,14 @@
 import React from "react";
-import "./shopListItem.css";
 import { Link } from "react-router-dom";
+import "./shopListItem.css";
 
-const ShopListItem = ({ id, name, price }) => {
+const ShopListItem = ({ id, name, price, images }) => {
   return (
     <Link to={`product/${id}`}>
       <div className="list-item">
-        <div className="list-item__image">Image</div>
+        <div className="image__container">
+          <img className="image--front" src={images} alt="product" />
+        </div>
         <div className="item-info">
           <div className="info">
             <p className="info-name">{name}</p>

@@ -3,20 +3,30 @@
   width: 100%;
   margin-bottom: 4rem;
 }
-.list-item__image {
+
+.item-info {
+  line-height: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-color,
+.info-status {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Images */
+
+.image__container {
   border: 1px solid #999;
   margin: auto;
   height: 100%;
   width: 100%;
   margin-bottom: 1rem;
 }
-.item-info {
-  line-height: 1.3rem;
-  display: flex;
-  justify-content: space-between;
-}
-.info-color,
-.info-status {
-  font-size: 0.9rem;
-  color: #777;
+
+.image--front {
+  height: 100%;
+  width: 100%;
 }
