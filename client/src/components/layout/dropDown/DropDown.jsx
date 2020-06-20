@@ -28,6 +28,8 @@ const DropDown = ({ title, list, border }) => {
     }
   };
 
+  const drawBottomBorder = () => (border ? "dd--border" : "");
+
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -40,8 +42,11 @@ const DropDown = ({ title, list, border }) => {
   const wrapperRef = useRef(null);
 
   return (
-    <div className="dd-wrapper" ref={wrapperRef}>
-      <div className="dd-header" onClick={() => toggleList()}>
+    <div className={"dd-wrapper "} ref={wrapperRef}>
+      <div
+        className={`dd-header ${drawBottomBorder()}`}
+        onClick={() => toggleList()}
+      >
         <div className="dd-header-title">{headerTitle}</div>
         <FontAwesome name="angle-down" />
       </div>
