@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import FontAwesome from "react-fontawesome";
 import "./dropDown.css";
 
-const DropDown = ({ title, list, border }) => {
+const DropDown = ({ title, list, border, hover }) => {
   let initialState = {
     listOpen: false,
     headerTitle: title,
@@ -30,6 +30,8 @@ const DropDown = ({ title, list, border }) => {
 
   const drawBottomBorder = () => (border ? "dd--border" : "");
 
+  const hoverListItem = () => (hover ? "dd--hover" : "");
+
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -52,11 +54,12 @@ const DropDown = ({ title, list, border }) => {
       </div>
       {listOpen && (
         <ul className="dd-list">
-          {list.map((item) => (
-            <li className="dd-list-item" key={item.id}>
-              {item.title}
-            </li>
-          ))}
+          {list &&
+            list.map((item, index) => (
+              <li className={`dd-list-item ${hoverListItem()}`} key={index}>
+                {item}
+              </li>
+            ))}
         </ul>
       )}
     </div>
