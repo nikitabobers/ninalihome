@@ -14,6 +14,7 @@ const ShopList = () => {
 
   useEffect(() => {
     dispatch(listProducts());
+    // eslint-disable-next-line
   }, []);
 
   return loading ? (
@@ -26,7 +27,7 @@ const ShopList = () => {
           id={item.id}
           width={item.itemWidth}
           name={item.name}
-          images={item.images}
+          images={item.images[0]}
           price={item.price}
         />
       ))}
