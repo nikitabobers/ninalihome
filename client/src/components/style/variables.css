@@ -1,8 +1,8 @@
 :root {
-    --color-black: #222;
-    --color-hover-grey: #7d7d7d;
-    --color-hover-white: #e4e4e4;
-    --color-hover-grey-light: #f6f6f6;
-    --color-grey: #f4f4f4;
-    --width-max: 1800px;
+	--color-black: #222;
+	--color-hover-grey: #7d7d7d;
+	--color-hover-white: #e4e4e4;
+	--color-hover-grey-light: #f6f6f6;
+	--color-grey: #f4f4f4;
+	--width-max: 1800px;
 }

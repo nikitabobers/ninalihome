@@ -4,8 +4,3 @@
 @import "./components/style/preferences.css";
 @import "./components/style/media.css";
 
-.container {
-  max-width: 1700px;
-  margin: auto;
-  padding: 0 2rem;
-}

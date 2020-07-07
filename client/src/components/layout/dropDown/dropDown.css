@@ -1,49 +1,49 @@
 .dd-header {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
 }
 
 .dd-list {
-  padding: 0.3rem 0.5rem;
-  border-top: none;
-  animation: pop-up 0.25s ease-out;
+	padding: 0.3rem 0.5rem;
+	border-top: none;
+	animation: pop-up 0.25s ease-out;
 }
 
 .dd-list-item {
-  padding-bottom: 0.3rem;
+	padding-bottom: 0.3rem;
 }
 
 .dd--hover:hover {
-  color: var(--color-hover-grey);
-  cursor: pointer;
+	color: var(--color-hover-grey);
+	cursor: pointer;
 }
 
 .dd-header,
 .dd-list-item {
-  color: var(--color-dark);
+	color: var(--color-dark);
 }
 
 .dd-wrapper span {
-  transition: all ease-in 0.25s;
+	transition: all ease-in 0.25s;
 }
 
 .dd-open span {
-  transition: all ease-in 0.25s;
-  transform: rotate(180deg);
+	transition: all ease-in 0.25s;
+	transform: rotate(180deg);
 }
 
 .dd--border {
-  border-bottom: 1px solid var(--color-grey);
+	border-bottom: 1px solid var(--color-grey);
 }
 
 @keyframes pop-up {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }

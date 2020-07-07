@@ -1,15 +1,15 @@
 .panel {
-    font-size: 0.7rem;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    padding: 0.5rem 0;
-    font-weight: 400;
+	font-size: 0.7rem;
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+	padding: 0.5rem 0;
+	font-weight: 400;
 }
 .panel__item-flex {
-    display: flex;
+	display: flex;
 }
 .panel__item-flex p,
 span {
-    margin-left: 1rem;
+	margin-left: 1rem;
 }

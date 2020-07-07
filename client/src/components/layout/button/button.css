@@ -1,27 +1,27 @@
 .btn {
-  border: none;
-  background: transparent;
-  font-weight: 700;
-  color: #333;
-  font-size: 1rem;
+	border: none;
+	background: transparent;
+	font-weight: 700;
+	color: #333;
+	font-size: 1rem;
 }
 .btn-shop {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 .btn--order {
-  margin: auto;
-  font-size: 1rem;
-  background: #333;
-  color: #fff;
-  padding: 0.7rem;
-  border-radius: 10px;
-  width: 100%;
+	margin: auto;
+	font-size: 1rem;
+	background: #333;
+	color: #fff;
+	padding: 0.7rem;
+	border-radius: 10px;
+	width: 100%;
 }
 .btn-shop a:hover {
-  color: #444;
+	color: #444;
 }
 
 .btn--order:hover {
-  color: #f4f4f4;
-  background: #444;
+	color: #f4f4f4;
+	background: #444;
 }
