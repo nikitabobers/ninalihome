@@ -1,30 +1,30 @@
 .pageNotFound {
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    width: 600px;
-    margin: auto;
-    padding-bottom: 5rem;
+	height: 90vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	width: 600px;
+	margin: auto;
+	padding-bottom: 5rem;
 }
 .pageNotFound__title {
-    line-height: 1.8rem;
-    margin-bottom: 1rem;
+	line-height: 1.8rem;
+	margin-bottom: 1rem;
 }
 .pageNotFound__title p {
-    font-weight: 300;
-    font-style: italic;
+	font-weight: 300;
+	font-style: italic;
 }
 .btn__pageNotFound a {
-    background: var(--color-black);
-    border-radius: 15px;
-    padding: 0.6rem 1rem;
-    color: #fff;
-    font-size: 1rem;
+	background: var(--color-black);
+	border-radius: 15px;
+	padding: 0.6rem 1rem;
+	color: #fff;
+	font-size: 1rem;
 }
 .btn__pageNotFound a:hover {
-    background: #333;
-    box-shadow: 0 0 4px var(--color-black);
+	background: #333;
+	box-shadow: 0 0 4px var(--color-black);
 }

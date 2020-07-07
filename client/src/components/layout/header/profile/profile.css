@@ -1,18 +1,18 @@
 .profile__menu {
-    display: flex;
+	display: flex;
 }
 .profile__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 1rem;
 }
 .profile__item i {
-    cursor: pointer;
-    color: #333;
-    padding: 9px 7px;
-    border-radius: 50%;
+	cursor: pointer;
+	color: #333;
+	padding: 9px 7px;
+	border-radius: 50%;
 }
 .profile__item i:hover {
-    background: var(--color-hover-grey-light);
+	background: var(--color-hover-grey-light);
 }

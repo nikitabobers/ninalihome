@@ -22,16 +22,16 @@ import "./sliderItem.css";
 import ButtonShop from "../../button/ButtonShop";
 
 const SliderItem = forwardRef(({ id, width }, ref) => {
-  const itemWidth = {
-    width: width + "px",
-  };
+	const itemWidth = {
+		width: width + "px",
+	};
 
-  return (
-    <li className="slider__item" ref={ref} style={itemWidth}>
-      <div>{id}</div>
-      <ButtonShop path="/shop" />
-    </li>
-  );
+	return (
+		<li className="slider__item" ref={ref} style={itemWidth}>
+			<div>{id}</div>
+			<ButtonShop path="/shop" />
+		</li>
+	);
 });
 
 export default SliderItem;

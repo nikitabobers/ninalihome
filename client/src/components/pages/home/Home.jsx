@@ -7,15 +7,15 @@ import SectionFour from "./layoutHome/section-4/HomeSection4";
 import "./home.css";
 
 const Home = () => {
-    return (
-        <Fragment>
-            <SectionOne />
-            <SectionTwo />
-            <SectionThree />
-            <SectionFour />
-            {/* <SectionFive /> */}
-        </Fragment>
-    );
+	return (
+		<Fragment>
+			<SectionOne />
+			<SectionTwo />
+			<SectionThree />
+			<SectionFour />
+			{/* <SectionFive /> */}
+		</Fragment>
+	);
 };
 
 export default Home;

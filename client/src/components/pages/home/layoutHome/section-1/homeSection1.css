@@ -1,15 +1,15 @@
 .section__one {
-    background: var(--color-grey);
+	background: var(--color-grey);
 }
 .section__one--img {
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
 }
 .section__one--img img {
-    height: 100%;
+	height: 100%;
 }
 .section__one--text {
-    text-align: center;
-    margin-right: 15rem;
+	text-align: center;
+	margin-right: 15rem;
 }

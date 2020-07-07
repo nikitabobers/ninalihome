@@ -5,50 +5,51 @@ import { useSelector } from "react-redux";
 import "./shopMenu.css";
 
 const ShopMenu = () => {
-  const [categories, setCategories] = useState([]);
-  const [color, setColor] = useState([]);
+	const [categories, setCategories] = useState([]);
 
-  const productList = useSelector((state) => state.productList);
+	const [color, setColor] = useState([]);
 
-  const { products } = productList;
+	const productList = useSelector((state) => state.productList);
 
-  const filterUndefined = (array) =>
-    array.filter((element) => element !== undefined);
+	const { products } = productList;
 
-  const getParameters = (array) => {
-    const categoriesData = filterUndefined([
-      ...new Set(array.map((x) => x.categories)),
-    ]);
+	const filterUndefined = (array) =>
+		array.filter((element) => element !== undefined);
 
-    const colorData = filterUndefined([...new Set(array.map((x) => x.color))]);
+	const getParameters = (array) => {
+		const categoriesData = filterUndefined([
+			...new Set(array.map((x) => x.categories)),
+		]);
 
-    setCategories(categoriesData);
+		const colorData = filterUndefined([...new Set(array.map((x) => x.color))]);
 
-    setColor(colorData);
-  };
+		setCategories(categoriesData);
 
-  useEffect(() => {
-    getParameters(products);
-  }, [products]);
+		setColor(colorData);
+	};
 
-  return (
-    <div className="shop-menu">
-      <div className="shop-menu__items">
-        <DropDown
-          title={<p>Categories</p>}
-          list={categories}
-          border={true}
-          hover={true}
-        />
-        <DropDown
-          title={<p>Colors</p>}
-          list={color}
-          border={true}
-          hover={true}
-        />
-      </div>
-    </div>
-  );
+	useEffect(() => {
+		getParameters(products);
+	}, [products]);
+
+	return (
+		<div className="shop-menu">
+			<div className="shop-menu__items">
+				<DropDown
+					title={<p>Categories</p>}
+					list={categories}
+					border={true}
+					hover={true}
+				/>
+				<DropDown
+					title={<p>Colors</p>}
+					list={color}
+					border={true}
+					hover={true}
+				/>
+			</div>
+		</div>
+	);
 };
 
 export default ShopMenu;
