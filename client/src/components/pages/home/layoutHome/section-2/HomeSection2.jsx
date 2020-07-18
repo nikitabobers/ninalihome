@@ -1,6 +1,6 @@
 import React from "react";
 import "./homeSection2.css";
-import ButtonShop from "../../../../layout/button/ButtonShop";
+import { Button } from "../../../../layout/button/Button";
 
 const HomeSection2 = () => {
 	return (
@@ -13,8 +13,7 @@ const HomeSection2 = () => {
 				</div>
 				<div className="section__two--text">
 					<h2 className="section__title">Accessories for home</h2>
-					<p></p>
-					<ButtonShop path="/shop" />
+					<Button buttonStyle="btn-shop">Shop now</Button>
 				</div>
 			</div>
 		</div>
