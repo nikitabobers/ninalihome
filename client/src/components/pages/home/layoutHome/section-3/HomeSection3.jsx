@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonShop from "../../../../layout/button/ButtonShop";
+import { Button } from "../../../../layout/button/Button";
 
 import "./homeSection3.css";
 
@@ -9,12 +9,12 @@ const HomeSection3 = () => {
 			<div className="section__three--grid container">
 				<div className="section__three-item">
 					<div className="section__three--text">
-						<ButtonShop path="/shop" />
+						<Button buttonStyle="btn-shop">Shop now</Button>
 					</div>
 				</div>
 				<div className="section__three-item">
 					<div className="section__three--text">
-						<ButtonShop path="/shop" />
+						<Button buttonStyle="btn-shop">Shop now</Button>
 					</div>
 				</div>
 			</div>
