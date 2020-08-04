@@ -1,6 +1,6 @@
 const loadState = () => {
 	try {
-		const state = localStorage.getItem("state");
+		const state = localStorage.getItem("cartItems");
 		if (state === null) {
 			return undefined;
 		}
@@ -12,23 +12,13 @@ const loadState = () => {
 
 const saveState = (state) => {
 	try {
-		let items = [];
+		const itemFromLS = localStorage.getItem("cartItems");
 
-		const itemFromLS = localStorage.getItem("state");
+		let items = JSON.parse(itemFromLS) || [];
 
-		if (itemFromLS) {
-			console.log("ss");
+		items.push(state);
 
-			// items = JSON.parse(itemFromLS);
-			// items.push(JSON.parse(itemFromLS));
-			const obj = { id: 1 };
-			console.log("xxxxxxxxx");
-			items.push(JSON.parse(obj));
-		}
-
-		items.push(JSON.stringify(state));
-
-		localStorage.setItem("state", items);
+		localStorage.setItem("cartItems", JSON.stringify(items));
 	} catch (err) {
 		console.log(err);
 		return undefined;
