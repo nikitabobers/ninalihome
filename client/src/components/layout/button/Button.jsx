@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./button.css";
 
 const Button = ({ children, buttonStyle, onClick }) => {

@@ -1,13 +1,16 @@
 .btn {
+	cursor: pointer;
 	border: none;
 	background: transparent;
 	font-weight: 700;
 	color: #333;
 	font-size: 1rem;
 }
+
 .btn-shop {
 	text-decoration: underline;
 }
+
 .btn--order {
 	margin: auto;
 	font-size: 1rem;
@@ -17,6 +20,7 @@
 	border-radius: 10px;
 	width: 100%;
 }
+
 .btn-shop a:hover {
 	color: #444;
 }
@@ -24,4 +28,35 @@
 .btn--order:hover {
 	color: #f4f4f4;
 	background: #444;
+}
+
+.btn--remove {
+	position: relative;
+	color: var(--color-black);
+	font-weight: 400;
+	transition: all 0.5s;
+	padding-bottom: 2px;
+	font-size: 0.9rem;
+}
+
+.btn--remove:hover {
+	color: var(--color-hover-grey);
+}
+
+.btn--remove::after {
+	transition: all 0.5s;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	content: ".";
+	color: transparent;
+	background: var(--color-hover-grey);
+	height: 1px;
+}
+
+.btn--remove:hover::after {
+	width: 00%;
 }
