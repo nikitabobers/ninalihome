@@ -1,10 +1,14 @@
-const loadState = () => {
+const localStorageItems = JSON.parse(localStorage.getItem("cartItems"));
+
+let items = localStorageItems !== null ? localStorageItems : [];
+
+const loadLC = () => {
 	try {
-		const state = localStorage.getItem("cartItems");
-		if (state === null) {
+		if (localStorageItems === null) {
 			return undefined;
 		}
-		return JSON.parse(state);
+		console.log(localStorageItems);
+		return localStorageItems;
 	} catch (err) {
 		return undefined;
 	}
@@ -12,12 +16,7 @@ const loadState = () => {
 
 const saveState = (state) => {
 	try {
-		const itemFromLS = localStorage.getItem("cartItems");
-
-		let items = JSON.parse(itemFromLS) || [];
-
 		items.push(state);
-
 		localStorage.setItem("cartItems", JSON.stringify(items));
 	} catch (err) {
 		console.log(err);
@@ -25,4 +24,16 @@ const saveState = (state) => {
 	}
 };
 
-export { loadState, saveState };
+const removeState = (itemID) => {
+	try {
+		return localStorage.setItem(
+			"cartItems",
+			JSON.stringify(items.filter((item) => item.id !== itemID))
+		);
+		// return { ...items, items: items.filter((item) => item.id !== itemID) };
+	} catch (err) {
+		console.log(err);
+	}
+};
+
+export { loadLC, saveState, removeState };
