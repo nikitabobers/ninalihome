@@ -5,9 +5,9 @@ import {
 	productDetailsReducer,
 } from "./reducers/productReducers";
 import { cartReducer } from "./reducers/cartReducer";
-import { loadState } from "./state/localStorage";
+import { loadLC } from "./state/localStorage";
 
-const cartItems = loadState() || [];
+const cartItems = loadLC() || [];
 
 const initialState = { cart: { cartItems } };
 
