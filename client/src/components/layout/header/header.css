@@ -1,22 +1,19 @@
 .header {
-    position: relative;
-    background: #fff;
-    width: 100%;
+	position: relative;
+	background: #fff;
+	width: 100%;
 }
 .header__bottom-window {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    min-height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: auto;
+	min-height: 60px;
 }
-/* .header__top-window {
-    border-bottom: 1px solid var(--color-grey);
-} */
 hr {
-    width: 100%;
-    left: 0;
-    position: absolute;
-    border: 0.5px solid var(--color-grey);
-    z-index: 5;
+	width: 100%;
+	left: 0;
+	position: absolute;
+	border: 0.1px solid var(--color-white-light);
+	z-index: 5;
 }
