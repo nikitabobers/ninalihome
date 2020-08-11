@@ -32,31 +32,14 @@
 
 .btn--remove {
 	position: relative;
-	color: var(--color-black);
+	color: var(--color-grey);
 	font-weight: 400;
 	transition: all 0.5s;
 	padding-bottom: 2px;
 	font-size: 0.9rem;
+	text-decoration: underline;
 }
 
 .btn--remove:hover {
 	color: var(--color-hover-grey);
-}
-
-.btn--remove::after {
-	transition: all 0.5s;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-	width: 100%;
-	content: ".";
-	color: transparent;
-	background: var(--color-hover-grey);
-	height: 1px;
-}
-
-.btn--remove:hover::after {
-	width: 00%;
 }

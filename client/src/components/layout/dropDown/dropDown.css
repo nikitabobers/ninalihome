@@ -15,7 +15,7 @@
 }
 
 .dd--hover:hover {
-	color: var(--color-hover-grey);
+	color: var(--color-grey);
 	cursor: pointer;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .dd--border {
-	border-bottom: 1px solid var(--color-grey);
+	border-bottom: 1px solid var(--color-white-light);
 }
 
 @keyframes pop-up {
