@@ -8,7 +8,7 @@
 	color: #fff;
 }
 .footer a:hover {
-	color: var(--color-hover-white);
+	color: var(--color-grey-light);
 }
 
 .footer hr {
