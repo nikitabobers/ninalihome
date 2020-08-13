@@ -1,20 +1,56 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "../../../layout/button/Button";
+import { changeQty } from "../../../../state/localStorage";
 import "./cartItem.css";
 
-function CartItem({ name, price, image, categories, color, size, qty }) {
+function CartItem({
+	name,
+	id,
+	price,
+	image,
+	categories,
+	color,
+	size,
+	onClick,
+	qty,
+}) {
+	const quantityList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+	const [selectedQty, setQty] = useState(qty);
+
+	const handleChange = (e) => {
+		setQty(e.target.value);
+	};
+
+	useEffect(() => {
+		changeQty(selectedQty, id);
+	}, [selectedQty, id]);
+
 	return (
 		<div className="cart__item">
-			<img className="cart__item-image" src={image} />
+			<img className="cart__item-image" src={image} alt={name} />
 			<div className="cart__item-info">
 				<h3 className="cart__item-name">{name}</h3>
 				<p className="cart__item-categories">{categories}</p>
 				<p className="cart__item-color">{color}</p>
 				<p className="cart__item-size">{size}</p>
-				<p className="cart__item-qty">{qty}</p>
-				<Button buttonStyle="btn--remove">Remove</Button>
+				<div className="cart__item-qty">
+					<label>
+						Select
+						<select value={selectedQty} onChange={handleChange}>
+							{quantityList.map((item) => (
+								<option key={item} value={item}>
+									{item}
+								</option>
+							))}
+						</select>
+					</label>
+				</div>
+				<Button buttonStyle="btn--remove" onClick={onClick}>
+					Remove
+				</Button>
 			</div>
-			<div className="cart__item-price">{price}</div>
+			<div className="cart__item-price">{price}$</div>
 		</div>
 	);
 }

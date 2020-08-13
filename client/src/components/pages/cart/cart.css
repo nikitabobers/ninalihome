@@ -1,5 +1,6 @@
 .cart__section {
-	max-width: 1100px;
+	max-width: 1000px;
+	min-height: 93vh;
 	margin: auto;
 	padding: 2rem 0;
 	display: grid;
@@ -7,5 +8,10 @@
 	grid-gap: 3rem;
 }
 
-.cart__section-list {
+.cart__section-total {
+	display: flex;
+}
+.cart__section-total span {
+	margin-left: 1rem;
+	font-weight: 600;
 }
