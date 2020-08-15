@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import DropDown from "../../../layout/dropDown/DropDown.jsx";
 import { useSelector } from "react-redux";
-// import { listProducts } from "../../../../actions/productActions";
 import "./shopMenu.css";
 
 const ShopMenu = () => {
@@ -16,19 +15,20 @@ const ShopMenu = () => {
 	const filterUndefined = (array) =>
 		array.filter((element) => element !== undefined);
 
-	const getParameters = (array) => {
-		const categoriesData = filterUndefined([
-			...new Set(array.map((x) => x.categories)),
-		]);
-
-		const colorData = filterUndefined([...new Set(array.map((x) => x.color))]);
-
-		setCategories(categoriesData);
-
-		setColor(colorData);
-	};
-
 	useEffect(() => {
+		const getParameters = (array) => {
+			const categoriesData = filterUndefined([
+				...new Set(array.map((x) => x.categories)),
+			]);
+
+			const colorData = filterUndefined([
+				...new Set(array.map((x) => x.color)),
+			]);
+
+			setCategories(categoriesData);
+
+			setColor(colorData);
+		};
 		getParameters(products);
 	}, [products]);
 
