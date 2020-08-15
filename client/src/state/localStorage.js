@@ -7,7 +7,6 @@ const loadLC = () => {
 		if (localStorageItems === null) {
 			return undefined;
 		}
-		console.log(localStorageItems);
 		return localStorageItems;
 	} catch (err) {
 		return undefined;
@@ -30,10 +29,29 @@ const removeState = (itemID) => {
 			"cartItems",
 			JSON.stringify(items.filter((item) => item.id !== itemID))
 		);
-		// return { ...items, items: items.filter((item) => item.id !== itemID) };
 	} catch (err) {
 		console.log(err);
 	}
 };
 
-export { loadLC, saveState, removeState };
+const changeQty = (qty, id) => {
+	try {
+		const qtyObject = { qty: parseInt(qty) };
+
+		const item = items.filter((product) => product.id === id);
+
+		const newItem = Object.assign(item[0], qtyObject);
+
+		// remove selected element from ITEMS array
+		localStorage.setItem("cartItems", JSON.stringify(item));
+
+		// add new ITEMS array to LC
+		localStorage.setItem("cartItems", JSON.stringify(items));
+
+		return newItem;
+	} catch (err) {
+		console.log(err);
+	}
+};
+
+export { loadLC, saveState, removeState, changeQty };

@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { CartItem } from "./cartItem/CartItem";
-import { removeItemFromCart } from "../../../actions/cartActions";
+import {
+	removeItemFromCart,
+	countTotalPrice,
+} from "../../../actions/cartActions";
 import { Loader } from "../../layout/loader/Loader";
 import "./cart.css";
 
 const Cart = (props) => {
 	const cart = useSelector((state) => state.cart);
 
-	const { cartItems, loading } = cart;
+	const { cartItems, loading, total } = cart;
 
 	const dispatch = useDispatch();
 
@@ -16,11 +19,9 @@ const Cart = (props) => {
 		dispatch(removeItemFromCart(id));
 	};
 
-	const calcTotal = () => {
-		const prices = cartItems.map((item) => item.price);
-		const sum = prices.reduce((acc, val) => acc + val);
-		return sum;
-	};
+	useEffect(() => {
+		dispatch(countTotalPrice());
+	}, [dispatch]);
 
 	return (
 		<div className="container">
@@ -50,7 +51,7 @@ const Cart = (props) => {
 						<div className="cart__section-promo">Do you have Promo Code?</div>
 						<div className="cart__section-total">
 							<p>Total:</p>
-							<span>{cartItems.length > 0 ? calcTotal() : 0}$</span>
+							<span>{cartItems.length > 0 ? total : 0}$</span>
 						</div>
 					</div>
 				</div>

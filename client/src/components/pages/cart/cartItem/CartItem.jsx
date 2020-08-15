@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Button } from "../../../layout/button/Button";
 import { changeQty } from "../../../../state/localStorage";
+import { countTotalPrice } from "../../../../actions/cartActions";
 import "./cartItem.css";
 
 function CartItem({
@@ -16,15 +18,15 @@ function CartItem({
 }) {
 	const quantityList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+	const dispatch = useDispatch();
+
 	const [selectedQty, setQty] = useState(qty);
 
 	const handleChange = (e) => {
 		setQty(e.target.value);
+		changeQty(e.target.value, id);
+		dispatch(countTotalPrice());
 	};
-
-	useEffect(() => {
-		changeQty(selectedQty, id);
-	}, [selectedQty, id]);
 
 	return (
 		<div className="cart__item">
