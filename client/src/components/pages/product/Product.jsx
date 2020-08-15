@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Loader } from "../../layout/loader/Loader";
 import { detailsProduct } from "../../../actions/productActions";
+import { addToCart } from "../../../actions/cartActions";
 import "./product.css";
 import DropDown from "../../layout/dropDown/DropDown";
 
@@ -18,6 +19,21 @@ const Product = (props) => {
 		dispatch(detailsProduct(id));
 		// eslint-disable-next-line
 	}, []);
+
+	const cartProduct = {
+		id: product.id,
+		name: product.name,
+		categories: product.categories,
+		images: product.images,
+		price: product.price,
+		sizes: product.sizes,
+		qty: 1,
+	};
+
+	const buyItem = (product) => {
+		dispatch(addToCart(cartProduct));
+		props.history.push("/cart");
+	};
 
 	return loading ? (
 		<Loader />
@@ -37,7 +53,7 @@ const Product = (props) => {
 						) : (
 							<p className="danger">Out of Stock</p>
 						)}
-						<p>{product.price}</p>
+						<p>{product.price}$</p>
 					</div>
 					<div className="product__name">
 						<h1>{product.name}</h1>
@@ -49,7 +65,7 @@ const Product = (props) => {
 						<p>{product.description}</p>
 					</div>
 					<div className="product__button">
-						<button className="btn btn--order">
+						<button className="btn btn--order" onClick={() => buyItem(product)}>
 							{product.available ? "Buy now" : "Order"}
 						</button>
 					</div>
