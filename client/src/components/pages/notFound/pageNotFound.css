@@ -17,14 +17,3 @@
 	font-weight: 300;
 	font-style: italic;
 }
-.btn__pageNotFound a {
-	background: var(--color-black);
-	border-radius: 15px;
-	padding: 0.6rem 1rem;
-	color: #fff;
-	font-size: 1rem;
-}
-.btn__pageNotFound a:hover {
-	background: #333;
-	box-shadow: 0 0 4px var(--color-black);
-}
