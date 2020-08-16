@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "../../layout/button/Button";
 import "./pageNotFound.css";
 import { Link } from "react-router-dom";
 
@@ -11,9 +12,9 @@ const PageNotFound = () => {
 					<p>but the page you were looking for can't be found</p>
 				</div>
 				<div className="pageNotFound__image"></div>
-				<button className="btn__pageNotFound btn">
+				<Button buttonStyle="btn--black">
 					<Link to="/">Home Page</Link>
-				</button>
+				</Button>
 			</div>
 		</div>
 	);
