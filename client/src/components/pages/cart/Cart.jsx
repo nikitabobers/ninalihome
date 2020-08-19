@@ -6,9 +6,10 @@ import {
 	countTotalPrice,
 } from "../../../actions/cartActions";
 import { Loader } from "../../layout/loader/Loader";
+import { Link } from "react-router-dom";
 import "./cart.css";
 
-const Cart = (props) => {
+const Cart = () => {
 	const cart = useSelector((state) => state.cart);
 
 	const { cartItems, loading, total } = cart;
@@ -48,11 +49,13 @@ const Cart = (props) => {
 					</div>
 					<div className="cart__section-pay">
 						<h2 className="">Summary</h2>
-						<div className="cart__section-promo">Do you have Promo Code?</div>
 						<div className="cart__section-total">
 							<p>Total:</p>
 							<span>{cartItems.length > 0 ? total : 0}$</span>
 						</div>
+						<Link className="btn btn--black" to="/order">
+							Place Order
+						</Link>
 					</div>
 				</div>
 			)}
