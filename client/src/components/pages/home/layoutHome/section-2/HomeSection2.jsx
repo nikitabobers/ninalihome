@@ -1,19 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./homeSection2.css";
-import { Button } from "../../../../layout/button/Button";
 
-const HomeSection2 = () => {
+const HomeSection2 = ({ list }) => {
 	return (
 		<div className="section section__two ">
 			<div className="section--flex container">
 				<div className="section__two--grid">
-					<div className="grid__item"></div>
-					<div className="grid__item"></div>
-					<div className="grid__item"></div>
+					{list.map((item) => {
+						return (
+							<div key={item.id} className="grid__item">
+								<img src={item.images[0]} />
+							</div>
+						);
+					})}
 				</div>
 				<div className="section__two--text">
 					<h2 className="section__title">Accessories for home</h2>
-					<Button buttonStyle="btn-shop">Shop now</Button>
+					<Link to="/shop" className="btn btn--shop">
+						Shop now
+					</Link>
 				</div>
 			</div>
 		</div>

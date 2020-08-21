@@ -9,6 +9,12 @@
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 2rem;
 }
+.section__three--text {
+	text-align: center;
+	position: absolute;
+	bottom: 3rem;
+	width: 100%;
+}
 .section__three-item {
 	position: relative;
 	height: 700px;
@@ -16,9 +22,7 @@
 	background: green;
 	text-align: center;
 }
-.section__three--text {
-	text-align: center;
-	position: absolute;
-	bottom: 3rem;
+.section__three img {
+	height: 700px;
 	width: 100%;
 }

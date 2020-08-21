@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./homeSection1.css";
-import { Button } from "../../../../layout/button/Button";
 
 const HomeSection1 = () => {
 	return (
@@ -12,7 +12,9 @@ const HomeSection1 = () => {
 				<div className="section__one--text">
 					<h2 className="section__title">Summer bag</h2>
 					<p>Stylish everyday bag for summer</p>
-					<Button buttonStyle="btn-shop">Shop now</Button>
+					<Link to="/shop" className="btn btn--shop">
+						Shop now
+					</Link>
 				</div>
 			</div>
 		</div>

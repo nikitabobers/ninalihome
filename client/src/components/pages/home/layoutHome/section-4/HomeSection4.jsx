@@ -1,26 +1,23 @@
 import React from "react";
-import { Button } from "../../../../layout/button/Button";
+import { Link } from "react-router-dom";
 import "./homeSection4.css";
 
-const HomeSection4 = () => {
+const HomeSection4 = ({ list }) => {
 	return (
 		<div className="section__four">
 			<div className="section__four--grid container">
-				<div className="section__four-item">
-					<div className="section__four--text">
-						<Button buttonStyle="btn-shop">Shop now</Button>
-					</div>
-				</div>
-				<div className="section__four-item">
-					<div className="section__four--text">
-						<Button buttonStyle="btn-shop">Shop now</Button>
-					</div>
-				</div>
-				<div className="section__four-item">
-					<div className="section__four--text">
-						<Button buttonStyle="btn-shop">Shop now</Button>
-					</div>
-				</div>
+				{list.map((item) => {
+					return (
+						<div key={item.id} className="section__four-item">
+							<img src={item.images} alt={item.name} />
+							<div className="section__four--text">
+								<Link to={`/product/${item.id}`} className="btn btn--shop">
+									Shop now
+								</Link>
+							</div>
+						</div>
+					);
+				})}
 			</div>
 		</div>
 	);

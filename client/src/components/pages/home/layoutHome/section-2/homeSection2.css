@@ -8,10 +8,9 @@
 	grid-gap: 2rem;
 	grid-template-columns: repeat(3, 1fr);
 }
-.grid__item {
-	background: red;
+.grid__item img {
 	height: 500px;
-	width: 330px;
+	width: 350px;
 }
 .section__two--text {
 	padding-left: 5rem;
