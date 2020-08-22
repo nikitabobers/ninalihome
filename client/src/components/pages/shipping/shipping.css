@@ -1,0 +1,20 @@
+.shipping__section {
+	max-width: 1000px;
+	min-height: 93vh;
+	margin: auto;
+	padding: 2rem 0;
+	display: grid;
+	grid-template-columns: 65% auto;
+	grid-gap: 3rem;
+}
+
+.shipping__form {
+	margin-top: 1rem;
+	padding-top: 0.3rem;
+}
+
+.shipping__cart a {
+	display: block;
+	text-align: center;
+	width: 100%;
+}
