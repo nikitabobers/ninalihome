@@ -1,0 +1,13 @@
+.select {
+	font-size: 0.9rem;
+	margin-left: 1rem;
+}
+
+.select--grey {
+	color: var(--color-grey);
+}
+
+.select--border {
+	border: 0px;
+	background: none;
+}
