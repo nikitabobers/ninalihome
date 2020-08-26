@@ -1,0 +1,53 @@
+.order__section {
+	max-width: 1000px;
+	min-height: 93vh;
+	margin: auto;
+	padding: 2rem 0;
+	display: grid;
+	grid-gap: 3rem;
+	grid-template-columns: 65% auto;
+	grid-template-areas:
+		"bag cart"
+		"shipping cart";
+}
+
+.order__bag {
+	grid-area: bag;
+}
+
+.order__shipping {
+	grid-area: shipping;
+	background: red;
+	min-height: 500px;
+}
+
+.order__checkout {
+	grid-area: cart;
+}
+
+.order--label {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	color: var(--color-grey);
+	margin-bottom: 1.5rem;
+	font-size: 0.9rem;
+}
+
+.order--label input {
+	color: var(--color-black);
+	border: 1px solid var(--color-grey-light);
+	min-height: 1.5rem;
+	font-size: 1rem;
+	font-family: sans-serif;
+	margin-top: 0.3rem;
+	padding: 0.3rem;
+}
+
+.order__bag .cart__item {
+	grid-template-columns: 100px 350px auto;
+}
+.order__bag .cart__item .item-image--small {
+	width: 80px;
+	height: 80px;
+}
