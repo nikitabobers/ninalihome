@@ -2,11 +2,13 @@ import {
 	CART_ADD_ITEM,
 	CART_DELETE_ITEM,
 	CART_COUNT_TOTAL_PRICE,
+	CART_ADD_SHIPPING,
 } from "../constants/cartConstants";
 
 const initialState = {
 	cartItems: [],
 	total: null,
+	shipping: {},
 };
 
 const cartReducer = (state = initialState, action) => {
@@ -34,6 +36,8 @@ const cartReducer = (state = initialState, action) => {
 				...state,
 				total: sum,
 			};
+		case CART_ADD_SHIPPING:
+			return { ...state, shipping: action.payload };
 		default:
 			return state;
 	}

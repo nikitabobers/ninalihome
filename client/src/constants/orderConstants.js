@@ -1,1 +1,0 @@
-export const ORDER_ADD_SHIPPING = "ORDER_ADD_SHIPPING";
