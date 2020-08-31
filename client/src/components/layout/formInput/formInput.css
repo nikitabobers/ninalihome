@@ -1,0 +1,23 @@
+.order--label {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	color: var(--color-grey);
+	margin-bottom: 1.5rem;
+	font-size: 0.9rem;
+}
+
+.order--label input {
+	color: var(--color-black);
+	border: 1px solid var(--color-grey-light);
+	min-height: 1.5rem;
+	font-size: 1rem;
+	font-family: sans-serif;
+	margin-top: 0.3rem;
+	padding: 0.3rem;
+}
+
+.error--message {
+	color: red;
+	margin-top: 0.5rem;
+}
