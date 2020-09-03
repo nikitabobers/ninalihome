@@ -18,6 +18,7 @@
 }
 
 .error--message {
+	font-size: 0.8rem;
 	color: red;
-	margin-top: 0.5rem;
+	margin-top: 0.3rem;
 }
