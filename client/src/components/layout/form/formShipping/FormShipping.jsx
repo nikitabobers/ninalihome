@@ -37,7 +37,7 @@ function FormShipping({ route }) {
 		typeError: null,
 	});
 
-	const handSubmit = (event) => {
+	const handleSubmit = (event) => {
 		event.preventDefault();
 
 		const errorValues = Object.values(errorState);
@@ -52,16 +52,24 @@ function FormShipping({ route }) {
 		}
 
 		// check if errorState messages are empty
+		let isEmpty = false;
+
 		for (let key of errorValues) {
-			if (key !== "") {
-				break;
+			if (key !== "" || key === null) {
+				return isEmpty;
+			} else {
+				isEmpty = true;
 			}
+		}
+
+		if (isEmpty) {
 			event.target.reset();
-			route.push("/order");
 			dispatch(addShipping({ shippingState }));
+			route.push("/order");
 		}
 	};
 
+	// console.log(errorState);
 	const handleChange = (event) => {
 		const { name, value } = event.target;
 
@@ -138,7 +146,7 @@ function FormShipping({ route }) {
 	};
 
 	return (
-		<Form className="form form--shipping" onSubmit={handSubmit}>
+		<Form className="form form--shipping" onSubmit={handleSubmit}>
 			<div className="form-grid form-grid--2">
 				<FormInput
 					name="firstName"

@@ -8,29 +8,6 @@
 	grid-gap: 3rem;
 }
 
-.shipping__form {
-	position: relative;
-	margin-top: 1rem;
-	padding-top: 0.3rem;
-}
-
-.form-grid {
-	display: grid;
-	grid-gap: 0 1rem;
-}
-
-.form-grid--2 {
-	grid-template-columns: repeat(2, 1fr);
-}
-
-.form-grid--3 {
-	grid-template-columns: repeat(3, 1fr);
-}
-
-.form-grid--3 input {
-	width: 100%;
-}
-
 .shipping__method {
 	margin: 1rem 0 1rem 0;
 	padding: 1rem 0 1.5rem 0;
@@ -48,14 +25,14 @@
 	width: 50%;
 }
 
-.shipping__form .select {
+.form--shipping .select {
 	background: none;
 	border: var(--color-grey-light) 1px solid;
 	padding: 0.3rem;
 	margin: 0.3rem 0 0 0;
 	width: 100%;
 }
-.shipping__form .btn {
+.form--shipping .btn {
 	width: 200px;
 }
 
