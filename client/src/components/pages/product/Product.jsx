@@ -45,8 +45,19 @@ const Product = (props) => {
 	//Check if product is in the cart
 	let button;
 	if (product.available) {
+		if (cartItems.length < 1) {
+			button = (
+				<Button
+					buttonStyle="btn--order"
+					onClick={() => {
+						buyItem(cartProduct);
+					}}
+				>
+					Buy Item
+				</Button>
+			);
+		}
 		for (let item of cartItems) {
-			console.log(item);
 			if (item.id === cartProduct.id) {
 				button = (
 					<Button buttonStyle="btn--order" onClick={() => goToCart()}>
@@ -59,7 +70,7 @@ const Product = (props) => {
 					<Button
 						buttonStyle="btn--order"
 						onClick={() => {
-							buyItem(product);
+							buyItem(cartProduct);
 						}}
 					>
 						Buy Item
