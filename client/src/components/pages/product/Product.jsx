@@ -1,19 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Loader } from "../../layout/loader/Loader";
 import { detailsProduct } from "../../../actions/productActions";
 import { addToCart } from "../../../actions/cartActions";
+import { Button } from "../../layout/button/Button";
 import "./product.css";
 import DropDown from "../../layout/dropDown/DropDown";
 
 const Product = (props) => {
 	const id = props.match.params.id;
 
+	const dispatch = useDispatch();
+	const cart = useSelector((state) => state.cart);
 	const productDetails = useSelector((state) => state.productDetails);
 
-	const { product, loading } = productDetails;
+	const { cartItems } = cart;
 
-	const dispatch = useDispatch();
+	const { product, loading } = productDetails;
 
 	useEffect(() => {
 		dispatch(detailsProduct(id));
@@ -31,9 +34,55 @@ const Product = (props) => {
 	};
 
 	const buyItem = (product) => {
-		dispatch(addToCart(cartProduct));
+		dispatch(addToCart(product));
 		props.history.push("/cart");
 	};
+
+	const goToCart = () => {
+		props.history.push("/cart");
+	};
+
+	//Check if product is in the cart
+	let button;
+	if (product.available) {
+		for (let item of cartItems) {
+			console.log(item);
+			if (item.id === cartProduct.id) {
+				button = (
+					<Button buttonStyle="btn--order" onClick={() => goToCart()}>
+						Checkout Cart
+					</Button>
+				);
+				break;
+			} else {
+				button = (
+					<Button
+						buttonStyle="btn--order"
+						onClick={() => {
+							buyItem(product);
+						}}
+					>
+						Buy Item
+					</Button>
+				);
+			}
+		}
+	} else {
+		button = (
+			<Button buttonStyle="btn--order" onClick={() => goToCart()}>
+				Place order
+			</Button>
+		);
+	}
+
+	//Check if product is available
+	let status;
+
+	if (product.available) {
+		status = <p className="success">In Stock</p>;
+	} else {
+		status = <p className="danger">Out of Stock</p>;
+	}
 
 	return loading ? (
 		<Loader />
@@ -48,11 +97,7 @@ const Product = (props) => {
 				</div>
 				<div className="product__info">
 					<div className="product__info-top">
-						{product.available ? (
-							<p className="success">In Stock</p>
-						) : (
-							<p className="danger">Out of Stock</p>
-						)}
+						{status}
 						<p>{product.price}$</p>
 					</div>
 					<div className="product__name">
@@ -64,11 +109,7 @@ const Product = (props) => {
 					<div className="product__description">
 						<p>{product.description}</p>
 					</div>
-					<div className="product__button">
-						<button className="btn btn--order" onClick={() => buyItem(product)}>
-							{product.available ? "Buy now" : "Order"}
-						</button>
-					</div>
+					<div className="product__button">{button}</div>
 					{product.materials && (
 						<div className="product__sizeMaterial--dropdown">
 							<DropDown
