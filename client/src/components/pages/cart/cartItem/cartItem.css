@@ -35,13 +35,7 @@
 	bottom: 0;
 }
 
-.cart__item-qty,
-.cart__item-qty select {
+.cart__item-qty {
 	color: var(--color-grey);
 	font-size: 0.9rem;
-}
-.cart__item-qty select {
-	margin-left: 1rem;
-	border: 0px;
-	background: none;
 }

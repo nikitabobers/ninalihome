@@ -1,11 +1,19 @@
 import React from "react";
 import "./select.css";
 
-function Select({ list, value, onChange, style }) {
+function Select({ list, name, onChange, selectStyle }) {
 	return (
-		<select className={`select select--grey ${style}`} onChange={onChange}>
+		<select
+			className={`select select--grey ${selectStyle ? selectStyle : ""}`}
+			onChange={onChange}
+			name={name}
+		>
 			{list.map((item) => (
-				<option key={item.value ? item.value : item} value={item.value}>
+				<option
+					key={item.value ? item.value : item}
+					name={item}
+					value={item.value}
+				>
 					{item.label ? item.label : item}
 				</option>
 			))}

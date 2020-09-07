@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Button } from "../../../layout/button/Button";
 import { changeQty } from "../../../../state/localStorage";
 import { countTotalPrice } from "../../../../actions/cartActions";
+import { Button } from "../../../layout/button/Button";
+import { Select } from "../../../layout/select/Select";
 import "./cartItem.css";
 
 function CartItem({
@@ -39,13 +40,12 @@ function CartItem({
 				<div className="cart__item-qty">
 					<label>
 						Select
-						<select value={selectedQty} onChange={handleChange}>
-							{quantityList.map((item) => (
-								<option key={item} value={item}>
-									{item}
-								</option>
-							))}
-						</select>
+						<Select
+							list={quantityList}
+							value={selectedQty}
+							onChange={handleChange}
+							selectStyle="select--border"
+						/>
 					</label>
 				</div>
 				<Button buttonStyle="btn--remove" onClick={onClick}>
