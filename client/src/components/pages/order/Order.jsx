@@ -4,18 +4,34 @@ import { Link } from "react-router-dom";
 import { countTotalPrice } from "../../../actions/cartActions";
 import { Loader } from "../../layout/loader/Loader";
 import { OrderItem } from "./orderItem/OrderItem";
+import { OrderShippingItem } from "./orderShippingItem/OrderShippingItem";
 import "./order.css";
 
 function Order() {
 	const cart = useSelector((state) => state.cart);
 
-	const { cartItems, loading, total } = cart;
+	const { cartItems, loading, shipping, total } = cart;
 
 	const dispatch = useDispatch();
 
 	useEffect(() => {
 		dispatch(countTotalPrice());
 	}, [dispatch]);
+
+	const shippingInfo = (shipping) => {
+		if (shipping) {
+			return Object.keys(shipping).map((key, keyIndex) => {
+				return (
+					<OrderShippingItem key={keyIndex} label={key} value={shipping[key]} />
+				);
+			});
+		} else {
+			return <Loader />;
+		}
+	};
+	useEffect(() => {
+		shippingInfo();
+	}, []);
 
 	return (
 		<div className="container">
@@ -40,6 +56,7 @@ function Order() {
 					</div>
 					<div className="order__shipping">
 						<h2 className="">Shipping info</h2>
+						{shippingInfo(shipping)}
 					</div>
 					<div className="order__checkout">
 						<h2 className="">Summary</h2>
