@@ -21,8 +21,10 @@ const Cart = () => {
 	};
 
 	useEffect(() => {
-		dispatch(countTotalPrice());
-	}, [dispatch]);
+		if (cartItems.length > 0) {
+			dispatch(countTotalPrice());
+		}
+	}, [dispatch, cartItems.length]);
 
 	const emtyBag = () => {
 		if (cartItems.length < 1) {

@@ -45,6 +45,7 @@ function CartItem({
 							value={selectedQty}
 							onChange={handleChange}
 							selectStyle="select--border"
+							selected={selectedQty}
 						/>
 					</label>
 				</div>
