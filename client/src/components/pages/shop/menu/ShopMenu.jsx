@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from "react";
 import DropDown from "../../../layout/dropDown/DropDown.jsx";
-import { useSelector } from "react-redux";
 import "./shopMenu.css";
 
-const ShopMenu = () => {
+const ShopMenu = ({ list }) => {
 	const [categories, setCategories] = useState([]);
 
 	const [color, setColor] = useState([]);
-
-	const productList = useSelector((state) => state.productList);
-
-	const { products } = productList;
 
 	const filterUndefined = (array) =>
 		array.filter((element) => element !== undefined);
@@ -29,8 +24,12 @@ const ShopMenu = () => {
 
 			setColor(colorData);
 		};
-		getParameters(products);
-	}, [products]);
+		getParameters(list);
+	}, [list]);
+
+	const handleSelectItem = (item) => {
+		console.log(item);
+	};
 
 	return (
 		<div className="shop-menu">

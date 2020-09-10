@@ -5,14 +5,14 @@ import {
 	removeItemFromCart,
 	countTotalPrice,
 } from "../../../actions/cartActions";
-import { Loader } from "../../layout/loader/Loader";
+import { checkLoading } from "../../layout/loader/Loader";
 import { Link } from "react-router-dom";
 import "./cart.css";
 
 const Cart = () => {
 	const cart = useSelector((state) => state.cart);
 
-	const { cartItems, loading, total } = cart;
+	const { cartItems, total } = cart;
 
 	const dispatch = useDispatch();
 
@@ -41,11 +41,6 @@ const Cart = () => {
 		}
 	};
 
-	const checkLoading = () => {
-		if (loading) {
-			return <Loader />;
-		}
-	};
 	const returnToShop = () => {
 		if (cartItems.length > 0) {
 			return (
