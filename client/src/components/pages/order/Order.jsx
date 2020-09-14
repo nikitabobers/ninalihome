@@ -56,7 +56,7 @@ function Order() {
 					</div>
 					<div className="order__shipping">
 						<h2 className="">Shipping info</h2>
-						{shippingInfo(shipping)}
+						<div>{shippingInfo(shipping)}</div>
 					</div>
 					<div className="order__checkout">
 						<h2 className="">Summary</h2>

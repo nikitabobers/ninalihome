@@ -1,8 +1,10 @@
 const localStorageItems = JSON.parse(localStorage.getItem("cartItems"));
+const localStorageShipping = JSON.parse(localStorage.getItem("shippingInfo"));
 
 let items = localStorageItems !== null ? localStorageItems : [];
+let shipping = localStorageShipping !== null ? localStorageShipping : {};
 
-const loadLC = () => {
+const loadItemsLC = () => {
 	try {
 		if (localStorageItems === null) {
 			return undefined;
@@ -13,10 +15,30 @@ const loadLC = () => {
 	}
 };
 
-const saveState = (state) => {
+const loadShippinhLC = () => {
+	try {
+		if (localStorageShipping === null) {
+			return undefined;
+		}
+		return localStorageShipping;
+	} catch (err) {
+		return undefined;
+	}
+};
+
+const saveCartState = (state) => {
 	try {
 		items.push(state);
 		localStorage.setItem("cartItems", JSON.stringify(items));
+	} catch (err) {
+		console.log(err);
+		return undefined;
+	}
+};
+
+const saveShippingState = (state) => {
+	try {
+		localStorage.setItem("shippingInfo", JSON.stringify(state));
 	} catch (err) {
 		console.log(err);
 		return undefined;
@@ -42,9 +64,6 @@ const changeQty = (qty, id) => {
 
 		const newItem = Object.assign(item[0], qtyObject);
 
-		// remove selected element from ITEMS array
-		localStorage.setItem("cartItems", JSON.stringify(item));
-
 		// add new ITEMS array to LC
 		localStorage.setItem("cartItems", JSON.stringify(items));
 
@@ -54,4 +73,11 @@ const changeQty = (qty, id) => {
 	}
 };
 
-export { loadLC, saveState, removeState, changeQty };
+export {
+	loadItemsLC,
+	loadShippinhLC,
+	saveCartState,
+	saveShippingState,
+	removeState,
+	changeQty,
+};

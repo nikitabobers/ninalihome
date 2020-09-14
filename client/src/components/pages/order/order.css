@@ -33,13 +33,14 @@
 }
 .order__shipping--item {
 	color: var(--color-grey);
+	max-width: 450px;
 	margin-top: 0.5rem;
-	display: flex;
+	display: grid;
+	grid-template-columns: 30% 1fr;
+	border-bottom: 1px solid var(--color-grey-light);
+	padding: 0.2rem;
 }
 
 .order__shipping--item p {
 	font-weight: 600;
-}
-.order__shipping--item span {
-	margin-left: 1rem;
 }

@@ -5,11 +5,13 @@ import {
 	productDetailsReducer,
 } from "./reducers/productReducers";
 import { cartReducer } from "./reducers/cartReducer";
-import { loadLC } from "./state/localStorage";
+import { loadItemsLC, loadShippinhLC } from "./state/localStorage";
 
-const cartItems = loadLC() || [];
+const cartItems = loadItemsLC() || [];
 
-const initialState = { cart: { cartItems } };
+const shipping = loadShippinhLC() || [];
+
+const initialState = { cart: { cartItems, shipping } };
 
 const reducer = combineReducers({
 	productList: productListReducer,

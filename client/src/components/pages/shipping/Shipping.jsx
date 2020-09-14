@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { countTotalPrice } from "../../../actions/cartActions";
-import { FormShipping } from "../../layout/form/formShipping/FromShipping";
+import { FormShipping } from "../../layout/form/formShipping/FormShipping";
 import "./shipping.css";
 
 function Shipping(props) {

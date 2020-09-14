@@ -63,8 +63,8 @@ function FormShipping({ route }) {
 		}
 
 		if (isEmpty) {
-			event.target.reset();
-			dispatch(addShipping({ shippingState }));
+			// event.target.reset();
+			dispatch(addShipping(shippingState));
 			route.push("/order");
 		}
 	};
@@ -147,7 +147,7 @@ function FormShipping({ route }) {
 
 	return (
 		<Form className="form form--shipping" onSubmit={handleSubmit}>
-			<div className="form-grid form-grid--2">
+			<div className="form-grid grid--2">
 				<FormInput
 					name="firstName"
 					type="text"
@@ -184,7 +184,7 @@ function FormShipping({ route }) {
 				onChangeFunction={(e) => handleChange(e)}
 				errorMessage={errorState.addressError}
 			/>
-			<div className="form-grid form-grid--3">
+			<div className="form-grid grid--3">
 				<FormInput
 					name="city"
 					type="text"
