@@ -3,14 +3,20 @@ import {
 	PRODUCT_LIST_SUCCESS,
 	PRODUCT_DETAILS_REQUEST,
 	PRODUCT_DETAILS_SUCCESS,
+	PRODUCT_LIST_FILTER,
 } from "../constants/productConstants";
 
-const productListReducer = (state = { products: [] }, action) => {
+const productListReducer = (
+	state = { products: [], filterProducts: [] },
+	action
+) => {
 	switch (action.type) {
 		case PRODUCT_LIST_REQUEST:
 			return { loading: true, products: [] };
 		case PRODUCT_LIST_SUCCESS:
 			return { loading: false, products: action.payload };
+		case PRODUCT_LIST_FILTER:
+			return { ...state, loading: false, filterProducts: action.payload };
 		default:
 			return state;
 	}

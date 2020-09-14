@@ -10,14 +10,14 @@
 	grid-gap: 0 1rem;
 }
 
-.form-grid--2 {
+.grid--2 {
 	grid-template-columns: repeat(2, 1fr);
 }
 
-.form-grid--3 {
+.grid--3 {
 	grid-template-columns: repeat(3, 1fr);
 }
 
-.form-grid--3 input {
+.grid--3 input {
 	width: 100%;
 }

@@ -1,50 +1,44 @@
 import React, { useEffect, useState } from "react";
-import DropDown from "../../../layout/dropDown/DropDown.jsx";
+import { Select } from "../../../layout/select/Select";
 import "./shopMenu.css";
 
-const ShopMenu = ({ list }) => {
+const filterUndefined = (array) =>
+	array.filter((element) => element !== undefined);
+
+const ShopMenu = ({ list, filterHandler }) => {
 	const [categories, setCategories] = useState([]);
 
 	const [color, setColor] = useState([]);
 
-	const filterUndefined = (array) =>
-		array.filter((element) => element !== undefined);
-
 	useEffect(() => {
-		const getParameters = (array) => {
-			const categoriesData = filterUndefined([
-				...new Set(array.map((x) => x.categories)),
-			]);
+		if (list) {
+			const getParameters = (array) => {
+				const categoriesData = filterUndefined([
+					...new Set(array.map((x) => x.categories)),
+				]);
 
-			const colorData = filterUndefined([
-				...new Set(array.map((x) => x.color)),
-			]);
+				const colorData = filterUndefined([
+					...new Set(array.map((x) => x.color)),
+				]);
 
-			setCategories(categoriesData);
+				setCategories(categoriesData);
 
-			setColor(colorData);
-		};
-		getParameters(list);
+				setColor(colorData);
+			};
+			getParameters(list);
+		}
 	}, [list]);
 
-	const handleSelectItem = (item) => {
-		console.log(item);
-	};
+	// const categories = ["Bags", "Accessories", "Clothing"];
 
 	return (
 		<div className="shop-menu">
 			<div className="shop-menu__items">
-				<DropDown
-					title={<p>Categories</p>}
+				<Select
+					onChange={(e) => filterHandler(e)}
 					list={categories}
-					border={true}
-					hover={true}
-				/>
-				<DropDown
-					title={<p>Colors</p>}
-					list={color}
-					border={true}
-					hover={true}
+					selectStyle="select--border"
+					show={true}
 				/>
 			</div>
 		</div>

@@ -1,13 +1,25 @@
 import React from "react";
 import "./select.css";
 
-function Select({ list, name, onChange, selectStyle }) {
+const placeholder = (show) => {
+	if (show) {
+		return (
+			<option value="" disabled selected>
+				Select category
+			</option>
+		);
+	}
+};
+
+function Select({ list, name, onChange, selectStyle, selected, show }) {
 	return (
 		<select
 			className={`select select--grey ${selectStyle ? selectStyle : ""}`}
 			onChange={onChange}
 			name={name}
+			value={selected}
 		>
+			{placeholder(show)}
 			{list.map((item) => (
 				<option
 					key={item.value ? item.value : item}
