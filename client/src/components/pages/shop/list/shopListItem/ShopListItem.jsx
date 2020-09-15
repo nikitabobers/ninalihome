@@ -15,7 +15,7 @@ const ShopListItem = ({ id, name, price, images }) => {
 						<p className="info-color">4 Colors</p>
 						<p className="info-status">In stock</p>
 					</div>
-					<div className="price">{price}</div>
+					<div className="price">{price}$</div>
 				</div>
 			</div>
 		</Link>

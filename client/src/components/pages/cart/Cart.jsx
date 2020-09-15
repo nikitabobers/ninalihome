@@ -30,7 +30,7 @@ const Cart = () => {
 		if (cartItems.length < 1) {
 			return (
 				<>
-					<h3 className="mt-2">Your bag is empty</h3>
+					<h3 className="mt-2">There are no items in your bag.</h3>
 					<div className="mt-2">
 						<Link className="btn btn--black" to="/shop">
 							Go to shopping
@@ -63,7 +63,7 @@ const Cart = () => {
 			{checkLoading()}
 			<div className="cart__section">
 				<div className="cart__section-list">
-					<h2 className="">Bag</h2>
+					<h2 className="title--border">Bag</h2>
 					{emtyBag()}
 					{cartItems.map((item) => (
 						<CartItem
@@ -82,7 +82,6 @@ const Cart = () => {
 				</div>
 				<div className="cart__section-pay">{returnToShop()}</div>
 			</div>
-			)}
 		</div>
 	);
 };

@@ -4,7 +4,11 @@ import {
 	CART_COUNT_TOTAL_PRICE,
 	CART_ADD_SHIPPING,
 } from "../constants/cartConstants";
-import { saveState, removeState } from "../state/localStorage";
+import {
+	saveCartState,
+	removeState,
+	saveShippingState,
+} from "../state/localStorage";
 
 const addToCart = (productItem) => async (dispatch) => {
 	try {
@@ -13,7 +17,7 @@ const addToCart = (productItem) => async (dispatch) => {
 			payload: productItem,
 		});
 
-		saveState(productItem);
+		saveCartState(productItem);
 	} catch (error) {
 		console.log(error);
 	}
@@ -46,6 +50,7 @@ const addShipping = (shipping) => async (dispatch) => {
 			type: CART_ADD_SHIPPING,
 			payload: shipping,
 		});
+		saveShippingState(shipping);
 	} catch (err) {
 		console.log(err);
 	}
