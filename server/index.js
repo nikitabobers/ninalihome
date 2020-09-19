@@ -1,16 +1,23 @@
+process.env.NODE_CONFIG_DIR = "./server/config";
+const bodyParser = require("body-parser");
 const express = require("express");
-// process.env.NODE_CONFIG_DIR = "./server/config";
-// const connectDB = require("./config/db");
-const data = require("./data.json");
 const app = express();
+const userRoute = require("./routes/userRoute");
+const authRoute = require("./routes/authRoute");
+const productRoute = require("./routes/productRoute");
+const connectDB = require("./config/db");
+const data = require("./data.json");
 
 const PORT = process.env.PORT || 5000;
 
-// connectDB();
+connectDB();
 
+app.use(bodyParser.json());
 app.use(express.static("public"));
-
-app.get("/api/products", (req, res) => res.send(data));
+app.use("/api/admin", userRoute);
+app.use("/api/auth", authRoute);
+app.use("/api/products", productRoute);
+// app.get("/api/products", (req, res) => res.send(data));
 
 app.get("/api/products/:id", (req, res) => {
 	const productId = req.params.id;
