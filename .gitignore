@@ -25,7 +25,10 @@ yarn-debug.log*
 yarn-error.log*
 
 dev.js
+
+# Server data
 data.json
+/server/config/default.json
 
 *.jpg
 /images
