@@ -1,0 +1,13 @@
+.login--section {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7rem;
+}
+.form--login {
+    width: 300px;
+}
+.login--section .form-section {
+    box-shadow: none;
+}
