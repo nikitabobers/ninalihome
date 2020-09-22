@@ -1,0 +1,20 @@
+.panel--item {
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+.panel--item img {
+    width: 75px;
+    height: 75px;
+}
+
+.panel--item .product__item-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+}
+
+.panel--item i {
+    margin-right: 1rem;
+}

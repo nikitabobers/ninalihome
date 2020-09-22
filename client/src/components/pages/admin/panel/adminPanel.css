@@ -1,0 +1,14 @@
+.admin__section {
+    min-height: 100vh;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.admin__section-list {
+    min-width: 600px;
+}
+
+.admin__section-list .title--border,
+.admin__section-product .title--border {
+    margin-bottom: 1rem;
+}

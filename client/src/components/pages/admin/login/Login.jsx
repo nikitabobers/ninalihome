@@ -1,10 +1,13 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { signIn } from "../../../../actions/adminActions";
 import "./login.css";
 
-function Login() {
+function Login(props) {
     const dispatch = useDispatch();
+    const admin = useSelector((state) => state.admin);
+
+    const { adminUser, error } = admin;
 
     const initialState = {
         name: null,
@@ -17,6 +20,12 @@ function Login() {
         e.preventDefault();
         dispatch(signIn(user));
     };
+
+    useEffect(() => {
+        if (adminUser) {
+            props.history.push("/admin/panel");
+        }
+    }, [adminUser]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -33,6 +42,7 @@ function Login() {
                     onSubmit={handleSubmit}
                     className="form--login form-section"
                 >
+                    <div className="error--message">{error}</div>
                     <label className="form--label">
                         Login
                         <input
