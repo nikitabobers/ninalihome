@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { signIn } from "../../../../actions/adminActions";
+import { loadUser, signIn } from "../../../../actions/adminActions";
 import "./login.css";
 
 function Login(props) {
     const dispatch = useDispatch();
     const admin = useSelector((state) => state.admin);
 
-    const { adminUser, error } = admin;
+    const { isAuthenticated, error } = admin;
 
     const initialState = {
         name: null,
@@ -22,10 +22,13 @@ function Login(props) {
     };
 
     useEffect(() => {
-        if (adminUser) {
+        if (isAuthenticated) {
             props.history.push("/admin/panel");
         }
-    }, [adminUser]);
+
+        console.log(isAuthenticated);
+        // eslint-disable-next-line
+    }, [admin]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
