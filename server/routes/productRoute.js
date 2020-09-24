@@ -41,6 +41,8 @@ router.get("/:id", async (req, res) => {
 
 router.put("/:id", auth, async (req, res) => {
     try {
+        console.log("test");
+        console.log(req.body);
         const {
             name,
             categories,

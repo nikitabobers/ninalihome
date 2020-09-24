@@ -11,7 +11,7 @@ const prodctSchema = new mongoose.Schema({
     dimensions: { type: [String], required: false },
     sizes: { type: [String], required: true },
     stock: { type: Boolean, default: 0, required: true },
-    time: { type: String, required: false },
+    time: { type: [String], required: false },
 });
 
 const Product = mongoose.model("product", prodctSchema);

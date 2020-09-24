@@ -14,7 +14,7 @@ const PanelItem = (props) => {
 
     const { product, loading } = productDetails;
 
-    const [newProduct, setNewProduct] = useState({});
+    const [newProduct, setNewProduct] = useState({ value: "value" });
 
     useEffect(() => {
         dispatch(detailsProduct(id));
@@ -62,6 +62,8 @@ const PanelItem = (props) => {
         dispatch(updateProduct(newProduct));
     };
 
+    if (loading) return <Loader />;
+
     return (
         <div className="container">
             <div className="admin__section">
@@ -69,9 +71,9 @@ const PanelItem = (props) => {
                     <h3 className="title--border">Product Details</h3>
                     <form className="form" onSubmit={handleSubmit}>
                         <div className="form-grid">
-                            {Object.keys(product).map((key) => {
+                            {Object.keys(product).map((key, index) => {
                                 return (
-                                    <label className="label">
+                                    <label key={index} className="label">
                                         {key}
                                         <input
                                             onChange={(e) => handleChange(e)}
