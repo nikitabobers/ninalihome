@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 import "./header.css";
 
 const checkRoute = () => {
-    if (window.location.pathname === "/admin/login") {
+    const address = window.location.pathname;
+
+    if (address.includes("admin")) {
         return null;
     } else {
         return (
