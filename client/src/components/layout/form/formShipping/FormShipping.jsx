@@ -69,7 +69,6 @@ function FormShipping({ route }) {
 		}
 	};
 
-	// console.log(errorState);
 	const handleChange = (event) => {
 		const { name, value } = event.target;
 

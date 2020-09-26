@@ -9,12 +9,8 @@ function FormInput({
 	errorMessage,
 	onChangeFunction,
 }) {
-	// const handleChange = (e) => {
-	// 	onChangeFunction(e.target.value);
-	// };
-
 	return (
-		<label className="order--label">
+		<label className="label">
 			{label}
 			<input
 				name={name}

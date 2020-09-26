@@ -3,11 +3,7 @@ import "./select.css";
 
 const placeholder = (show) => {
 	if (show) {
-		return (
-			<option value="" disabled selected>
-				Select category
-			</option>
-		);
+		return <option defaultValue="select">Select category</option>;
 	}
 };
 
