@@ -2,15 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./homeSection2.css";
 
-const HomeSection2 = ({ list }) => {
+const HomeSectionTwo = ({ list }) => {
 	return (
 		<div className="section section__two ">
 			<div className="section--flex container">
 				<div className="section__two--grid">
 					{list.map((item) => {
 						return (
-							<div key={item.id} className="grid__item">
-								<img src={item.images[0]} />
+							<div key={item._id} className="grid__item">
+								<img src={item.images[0]} alt={item.name} />
 							</div>
 						);
 					})}
@@ -26,4 +26,4 @@ const HomeSection2 = ({ list }) => {
 	);
 };
 
-export default HomeSection2;
+export { HomeSectionTwo };

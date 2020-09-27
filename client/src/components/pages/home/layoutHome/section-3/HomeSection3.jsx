@@ -2,16 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./homeSection3.css";
 
-const HomeSection3 = ({ list }) => {
+const HomeSectionThree = ({ list }) => {
 	return (
 		<div className="section section__three">
 			<div className="section__three--grid container">
 				{list.map((item) => {
 					return (
-						<div key={item.id} className="section__three-item">
+						<div key={item._id} className="section__three-item">
 							<img src={item.images[0]} alt={item.name} />
 							<div className="section__three--text">
-								<Link to={`/product/${item.id}`} className="btn btn--shop">
+								<Link to={`/product/${item._id}`} className="btn btn--shop">
 									Shop now
 								</Link>
 							</div>
@@ -23,4 +23,4 @@ const HomeSection3 = ({ list }) => {
 	);
 };
 
-export default HomeSection3;
+export { HomeSectionThree };

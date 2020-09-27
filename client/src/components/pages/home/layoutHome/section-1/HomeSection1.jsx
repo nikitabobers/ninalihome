@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./homeSection1.css";
 
-const HomeSection1 = () => {
+const HomeSectionOne = () => {
 	return (
 		<div className="section section__one">
 			<div className="section--flex container">
@@ -21,4 +21,4 @@ const HomeSection1 = () => {
 	);
 };
 
-export default HomeSection1;
+export { HomeSectionOne };

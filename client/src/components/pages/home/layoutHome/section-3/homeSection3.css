@@ -1,28 +1,35 @@
 .section__three {
-	min-height: 300px;
 	background: var(--color-white-light);
 	margin: 5rem 0;
-	padding: 2rem 0;
+	padding: 0.5rem 0;
 }
 .section__three--grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 2rem;
+	/* height: 570px; */
 }
 .section__three--text {
 	text-align: center;
-	position: absolute;
-	bottom: 3rem;
+	margin-top: 1rem;
 	width: 100%;
 }
 .section__three-item {
 	position: relative;
-	height: 700px;
+	height: 600px;
+	margin: auto;
+	height: 80%;
 	width: 100%;
-	background: green;
 	text-align: center;
 }
 .section__three img {
-	height: 700px;
+	/* height: 700px; */
+	height: 100%;
 	width: 100%;
+}
+
+@media (min-width: 1024px) {
+	.section__three-item {
+		height: 90%;
+	}
 }
