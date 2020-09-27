@@ -4,5 +4,8 @@
 	--color-grey-light: #e4e4e4;
 	--color-white-dark: #f6f6f6;
 	--color-white-light: #f4f4f4;
-	--width-max: 1800px;
+	--width-desktop-large: 1800px;
+	--media-desktop: 1200px;
+	--media-tablet: 850px;
+	--media-smartphone: 480px;
 }

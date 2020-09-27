@@ -10,6 +10,8 @@ const DropDown = ({ title, list, border, hover }) => {
 
 	const [state, setState] = useState(initialState);
 
+	const { headerTitle, listOpen } = state;
+
 	const toggleList = () => {
 		wrapperRef.current.classList.toggle("dd-open");
 		setState((prevState) => ({
@@ -32,16 +34,14 @@ const DropDown = ({ title, list, border, hover }) => {
 
 	const hoverListItem = () => (hover ? "dd--hover" : "");
 
+	const wrapperRef = useRef(null);
+
 	useEffect(() => {
 		document.addEventListener("mousedown", handleClickOutside);
 		return () => {
 			document.removeEventListener("mousedown", handleClickOutside);
 		};
 	});
-
-	const { headerTitle, listOpen } = state;
-
-	const wrapperRef = useRef(null);
 
 	return (
 		<div className={"dd-wrapper "} ref={wrapperRef}>
@@ -56,7 +56,11 @@ const DropDown = ({ title, list, border, hover }) => {
 				<ul className="dd-list">
 					{list &&
 						list.map((item, index) => (
-							<li className={`dd-list-item ${hoverListItem()}`} key={index}>
+							<li
+								value={item}
+								className={`dd-list-item ${hoverListItem()}`}
+								key={index}
+							>
 								{item}
 							</li>
 						))}

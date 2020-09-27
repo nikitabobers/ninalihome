@@ -9,3 +9,11 @@
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
+@media (max-width: 585px) {
+	.shop-list {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.product__images {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}

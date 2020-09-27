@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Loader } from "../../layout/loader/Loader";
 import { detailsProduct } from "../../../actions/productActions";
@@ -24,7 +24,7 @@ const Product = (props) => {
 	}, []);
 
 	const cartProduct = {
-		id: product.id,
+		id: product._id,
 		name: product.name,
 		categories: product.categories,
 		images: product.images,
@@ -42,54 +42,45 @@ const Product = (props) => {
 		props.history.push("/cart");
 	};
 
+	const goToContact = () => {
+		props.history.push("/contact");
+	};
+
+	const buttonType = (text, action, path = null) => {
+		return (
+			<Button
+				buttonStyle="btn--order"
+				onClick={() => {
+					action(path);
+				}}
+			>
+				{text}
+			</Button>
+		);
+	};
+
 	//Check if product is in the cart
 	let button;
-	if (product.available) {
+	if (product.stock) {
 		if (cartItems.length < 1) {
-			button = (
-				<Button
-					buttonStyle="btn--order"
-					onClick={() => {
-						buyItem(cartProduct);
-					}}
-				>
-					Buy Item
-				</Button>
-			);
+			button = buttonType("Buy Item", buyItem, cartProduct);
 		}
 		for (let item of cartItems) {
 			if (item.id === cartProduct.id) {
-				button = (
-					<Button buttonStyle="btn--order" onClick={() => goToCart()}>
-						Checkout Cart
-					</Button>
-				);
+				button = buttonType("Checkout Cart", goToCart);
 				break;
 			} else {
-				button = (
-					<Button
-						buttonStyle="btn--order"
-						onClick={() => {
-							buyItem(cartProduct);
-						}}
-					>
-						Buy Item
-					</Button>
-				);
+				button = buttonType("Buy Item", buyItem, cartProduct);
 			}
 		}
 	} else {
-		button = (
-			<Button buttonStyle="btn--order" onClick={() => goToCart()}>
-				Place order
-			</Button>
-		);
+		button = buttonType("Order Item", goToContact);
 	}
 
 	//Check if product is available
 	let status;
 
-	if (product.available) {
+	if (product.stock) {
 		status = <p className="success">In Stock</p>;
 	} else {
 		status = <p className="danger">Out of Stock</p>;

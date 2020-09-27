@@ -8,7 +8,7 @@ import {
 	saveCartState,
 	removeState,
 	saveShippingState,
-} from "../state/localStorage";
+} from "../state/productLS";
 
 const addToCart = (productItem) => async (dispatch) => {
 	try {

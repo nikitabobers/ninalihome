@@ -7,6 +7,10 @@
 	font-size: 1rem;
 }
 
+.btn a {
+	color: #fff;
+}
+
 .btn--shop {
 	text-decoration: underline;
 }
@@ -44,34 +48,35 @@
 	color: var(--color-hover-grey);
 }
 
-.btn--paypal {
-	width: 100%;
-	border: 1px solid var(--color-grey-light);
+.btn--black {
 	border-radius: 15px;
-	margin-top: 1rem;
-	padding: 0.5rem;
+	font-size: 1rem;
+	padding: 0.6rem 1rem;
 }
-
-.btn--paypal:hover {
-	background: #e8f7ff;
-}
-
-.btn--paypal:hover img {
-	opacity: 0.8;
-}
-
 .btn--black {
 	background: var(--color-black);
-	border-radius: 15px;
-	padding: 0.6rem 1rem;
 	color: #fff;
-	font-size: 1rem;
 }
 
-.btn--black a {
-	color: #fff;
-}
 .btn--black:hover {
 	background: #333;
 	box-shadow: 0 0 4px var(--color-black);
+}
+
+.btn--link {
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+.btn--light {
+	font-weight: 500;
+	padding: 0.3rem 0.5rem;
+	border-radius: 10px;
+	background: var(--color-black);
+	color: #fff;
+}
+
+.btn--light:hover {
+	background: #555;
 }

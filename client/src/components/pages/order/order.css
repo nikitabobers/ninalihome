@@ -20,12 +20,10 @@
 	min-height: 500px;
 }
 
-.order__checkout {
-	grid-area: cart;
-}
-
 .order__bag .cart__item {
-	grid-template-columns: 100px 350px auto;
+	display: grid;
+	grid-template-columns: 100px auto 70px;
+	margin-top: 1rem;
 }
 .order__bag .cart__item .item-image--small {
 	width: 80px;

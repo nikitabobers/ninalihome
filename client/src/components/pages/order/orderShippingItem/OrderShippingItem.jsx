@@ -1,7 +1,14 @@
 import React from "react";
 
 const strToUpperCase = (string) => {
-	return string.charAt(0).toUpperCase() + string.slice(1);
+	return (
+		// Set first letter to uppercase
+		string.charAt(0).toUpperCase() +
+		string
+			.slice(1) // Get rest of the word (without first letter)
+			.split(/(?=[A-Z])/) // Find if there is capital letter
+			.join(" ") // Join in whole word
+	);
 };
 
 function OrderShippingItem({ label, value }) {

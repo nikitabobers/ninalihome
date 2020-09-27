@@ -5,14 +5,14 @@ import {
 	removeItemFromCart,
 	countTotalPrice,
 } from "../../../actions/cartActions";
-import { checkLoading } from "../../layout/loader/Loader";
+import { Loader } from "../../layout/loader/Loader";
 import { Link } from "react-router-dom";
 import "./cart.css";
 
 const Cart = () => {
 	const cart = useSelector((state) => state.cart);
 
-	const { cartItems, total } = cart;
+	const { cartItems, total, loading } = cart;
 
 	const dispatch = useDispatch();
 
@@ -58,9 +58,10 @@ const Cart = () => {
 		}
 	};
 
+	if (loading) return <Loader />;
+
 	return (
 		<div className="container">
-			{checkLoading()}
 			<div className="cart__section">
 				<div className="cart__section-list">
 					<h2 className="title--border">Bag</h2>

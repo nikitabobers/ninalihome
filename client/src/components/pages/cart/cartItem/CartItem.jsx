@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { changeQty } from "../../../../state/localStorage";
+import { changeQty } from "../../../../state/productLS";
 import { countTotalPrice } from "../../../../actions/cartActions";
 import { Button } from "../../../layout/button/Button";
 import { Select } from "../../../layout/select/Select";
@@ -30,14 +30,14 @@ function CartItem({
 	};
 
 	return (
-		<div className="cart__item">
-			<img className="cart__item-image" src={image} alt={name} />
-			<div className="cart__item-info">
-				<h3 className="cart__item-name">{name}</h3>
-				<p className="cart__item-categories">{categories}</p>
-				<p className="cart__item-color">{color}</p>
-				<p className="cart__item-size">{size}</p>
-				<div className="cart__item-qty">
+		<div className="product__item">
+			<img className="product__item-image" src={image} alt={name} />
+			<div className="product__item-info">
+				<h3 className="product__item-name">{name}</h3>
+				<p className="product__item-categories">{categories}</p>
+				<p className="product__item-color">{color}</p>
+				<p className="product__item-size">{size}</p>
+				<div className="product__item-qty">
 					<label>
 						Select
 						<Select
@@ -53,7 +53,7 @@ function CartItem({
 					Remove
 				</Button>
 			</div>
-			<div className="cart__item-price">{price}$</div>
+			<div className="product__item-price">{price}$</div>
 		</div>
 	);
 }
