@@ -1,14 +1,42 @@
 .admin__section {
-    min-height: 100vh;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
+	position: relative;
+	margin-top: 2rem;
+	display: flex;
+	justify-content: center;
+}
+
+.admin__section .logOut {
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 .admin__section-list {
-    min-width: 600px;
+	min-width: 600px;
 }
 
 .admin__section-list .title--border,
 .admin__section-product .title--border {
-    margin-bottom: 1rem;
+	margin-bottom: 1rem;
+}
+
+.admin__section-top-panel {
+	display: flex;
+	justify-content: space-between;
+}
+
+.admin__section-top-panel span {
+	margin-right: 1rem;
+}
+
+.admin__section-top-panel span:hover {
+	color: var(--color-grey);
+}
+
+.admin__section a:hover i {
+	color: var(--color-grey);
+}
+
+.admin__section-top-panel a:hover i {
+	transform: rotate(90deg);
+	transition: 0.5s;
 }

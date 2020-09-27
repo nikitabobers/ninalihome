@@ -3,9 +3,6 @@ import {
 	USER_SIGNIN,
 	USER_LOGOUT,
 	USER_LOADED,
-	USER_ITEM_ADD,
-	USER_ITEM_DELETE,
-	USER_ITEM_EDIT,
 	USER_SIGNIN_FAIL,
 } from "../constants/adminConstants";
 import { authToken } from "../utils/authToken";
@@ -49,4 +46,12 @@ const signIn = (formData) => async (dispatch) => {
 	}
 };
 
-export { signIn, loadUser };
+const logOut = () => async (dispatch) => {
+	try {
+		dispatch({ type: USER_LOGOUT, payload: "logout" });
+	} catch (err) {
+		console.log(err);
+	}
+};
+
+export { signIn, loadUser, logOut };
