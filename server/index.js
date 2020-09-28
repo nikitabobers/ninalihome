@@ -2,6 +2,7 @@ process.env.NODE_CONFIG_DIR = "./server/config";
 // process.env.NODE_ENV = "../client/build";
 const bodyParser = require("body-parser");
 const express = require("express");
+const path = require("path");
 const app = express();
 const userRoute = require("./routes/userRoute");
 const authRoute = require("./routes/authRoute");
