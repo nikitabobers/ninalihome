@@ -8,9 +8,9 @@
 		"server": "nodemon server/index.js",
 		"client": "npm start --prefix client",
 		"dev": "concurrently \"npm run server\" \"npm run client\"",
-		"build": "cd client && yarn build",
-		"install-client": "cd client && yarn install",
-		"heroku-postbuild": "yarn install-client && yarn build"
+		"build": "cd client && npm build --prefix client",
+		"install-client": "cd client && npm install --prefix client",
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install-client && npm build"
 	},
 	"repository": {
 		"type": "git",
