@@ -17,6 +17,10 @@ app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/products", productRoute);
 
+if (process.env.NODE_ENV === "production") {
+	app.use(express.static("../client/build"));
+}
+
 app.listen(PORT, () => {
-    console.log(`Sever run at port ${PORT}`);
+	console.log(`Sever run at port ${PORT}`);
 });
