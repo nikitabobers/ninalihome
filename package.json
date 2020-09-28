@@ -8,7 +8,7 @@
 		"server": "nodemon server/index.js",
 		"client": "npm start --prefix client ",
 		"dev": "concurrently \"npm run server\" \"npm run client\"",
-		"heroku-postbuild": "yarn --cwd ./client && yarn install && yarn --cwd ./client && yarn build "
+		"heroku-postbuild": "yarn --cwd ./client && yarn install"
 	},
 	"repository": {
 		"type": "git",
