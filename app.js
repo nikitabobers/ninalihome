@@ -23,14 +23,14 @@ mongoose
     .catch((err) => console.log(err));
 
 app.use(bodyParser.json());
-// app.use(express.static("public"));
+app.use(express.static("public"));
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/products", productRoute);
 
 app.use(express.static("./client/build"));
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname + "/../client/build/index.html"));
+    res.sendFile(path.join(__dirname + "./client/build/index.html"));
 });
 
 // app.listen(PORT, () => {
