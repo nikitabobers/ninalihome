@@ -1,39 +1,39 @@
 {
-	"name": "ninalihome",
-	"version": "1.0.0",
-	"description": "ecommerce website",
-	"main": "index.js",
-	"scripts": {
-		"start": "node server/index.js",
-		"server": "nodemon server/index.js",
-		"client": "npm start --prefix client ",
-		"dev": "concurrently \"npm run server\" \"npm run client\"",
-		"heroku-postbuild": "NPM_COFIG_PRODUCTION=true cd client && yarn && yarn run build"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/nikitabobers/ninalihome.git"
-	},
-	"author": "Nikita Bobers",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/nikitabobers/ninalihome/issues"
-	},
-	"homepage": "https://github.com/nikitabobers/ninalihome#readme",
-	"dependencies": {
-		"async": "^3.2.0",
-		"bcrypt": "^5.0.0",
-		"bcryptjs": "^2.4.3",
-		"body-parser": "^1.19.0",
-		"config": "^3.3.1",
-		"dotenv": "^8.2.0",
-		"express": "^4.17.1",
-		"express-validator": "^6.6.1",
-		"jsonwebtoken": "^8.5.1",
-		"mongoose": "^5.9.16"
-	},
-	"devDependencies": {
-		"concurrently": "^5.2.0",
-		"nodemon": "^2.0.4"
-	}
+    "name": "ninalihome",
+    "version": "1.0.0",
+    "description": "ecommerce website",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server/index.js",
+        "server": "nodemon server/index.js",
+        "client": "npm start --prefix client ",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "heroku-postbuild": "cd client && npm install && npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nikitabobers/ninalihome.git"
+    },
+    "author": "Nikita Bobers",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/nikitabobers/ninalihome/issues"
+    },
+    "homepage": "https://github.com/nikitabobers/ninalihome#readme",
+    "dependencies": {
+        "async": "^3.2.0",
+        "bcrypt": "^5.0.0",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.0",
+        "config": "^3.3.1",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "express-validator": "^6.6.1",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.9.16"
+    },
+    "devDependencies": {
+        "concurrently": "^5.2.0",
+        "nodemon": "^2.0.4"
+    }
 }

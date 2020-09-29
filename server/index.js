@@ -10,6 +10,7 @@ const connectDB = require("./config/db");
 
 const PORT = process.env.PORT || 5000;
 
+console.log(process.env.NODE_ENV);
 connectDB();
 
 app.use(bodyParser.json());
@@ -18,12 +19,10 @@ app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/products", productRoute);
 
-if (process.env.NODE_ENV === "production") {
-	app.use(express.static("../client/build"));
-	app.get("*", (req, res) => {
-		res.sendFile(path.join(__dirname + "../client/build/index.html"));
-	});
-}
+app.use(express.static("../client/build"));
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname + "../client/build/index.html"));
+});
 
 app.listen(PORT, () => {
 	console.log(`Sever run at port ${PORT}`);
