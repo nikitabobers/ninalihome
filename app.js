@@ -1,4 +1,4 @@
-process.env.NODE_CONFIG_DIR = "./server/config";
+process.env.NODE_CONFIG_DIR = "./config";
 const bodyParser = require("body-parser");
 const express = require("express");
 const path = require("path");
@@ -33,6 +33,8 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname + "/../client/build/index.html"));
 });
 
-app.listen(PORT, () => {
-    console.log(`Sever run at port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`Sever run at port ${PORT}`);
+// });
+
+module.exports = app;
