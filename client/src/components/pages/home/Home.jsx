@@ -24,7 +24,7 @@ const Home = () => {
 
 	return (
 		<Fragment>
-			<HomeSectionOne />
+			<HomeSectionOne list={products.slice(5, 6)} />
 			<HomeSectionTwo list={products.slice(0, 3)} />
 			<HomeSectionThree list={products.slice(3, 5)} />
 			<HomeSectionFour list={products.slice(5, 8)} />

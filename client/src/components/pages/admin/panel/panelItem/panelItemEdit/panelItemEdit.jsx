@@ -18,7 +18,7 @@ const PanelItemEdit = (props) => {
 
 	useEffect(() => {
 		dispatch(detailsProduct(id));
-	}, []);
+	}, [id, dispatch]);
 
 	useEffect(() => {
 		setNewProduct(() => ({ ...product }));

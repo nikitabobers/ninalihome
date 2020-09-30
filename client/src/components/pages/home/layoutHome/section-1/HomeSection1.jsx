@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./homeSection1.css";
 
-const HomeSectionOne = () => {
+const HomeSectionOne = ({ list }) => {
 	return (
 		<div className="section section__one">
 			<div className="section--flex container">
 				<div className="section__one--img">
-					<img src={require("./bag.jpg")} alt="bag" />
+					<img src={require("./bag.webp")} alt="bag" />
 				</div>
 				<div className="section__one--text">
 					<h2 className="section__title">Summer bag</h2>

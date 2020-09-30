@@ -28,7 +28,7 @@ const PanelItemNew = (props) => {
 	};
 
 	const handleChange = (e) => {
-		const { name, value, is } = e.target;
+		const { name, value } = e.target;
 
 		if (
 			name === "color" ||

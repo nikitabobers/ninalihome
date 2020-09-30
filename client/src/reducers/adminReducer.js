@@ -2,9 +2,6 @@ import {
 	USER_SIGNIN,
 	USER_REQUEST,
 	USER_LOGOUT,
-	USER_ITEM_ADD,
-	USER_ITEM_DELETE,
-	USER_ITEM_EDIT,
 	USER_SIGNIN_FAIL,
 	USER_LOADED,
 } from "../constants/adminConstants";

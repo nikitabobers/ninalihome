@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { loadUser, signIn } from "../../../../actions/adminActions";
+import { signIn } from "../../../../actions/adminActions";
 import "./login.css";
 
 function Login(props) {
