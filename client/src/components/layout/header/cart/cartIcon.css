@@ -1,0 +1,35 @@
+.cart__nav {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 1rem;
+}
+
+.cart__nav i {
+	cursor: pointer;
+	color: #333;
+	padding: 9px 7px;
+	border-radius: 50%;
+}
+
+.cart__nav i:hover {
+	background: var(--color-hover-grey-light);
+}
+
+.cart-count {
+	z-index: 10;
+	position: absolute;
+	top: -2px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	background: red;
+	font-size: 10px;
+	line-height: 13px;
+	font-weight: 600;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+}

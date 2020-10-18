@@ -4,24 +4,35 @@ import "./navbar.css";
 
 const Navbar = () => {
 	return (
-		<nav className="navbar stroke">
+		<nav className="navbar">
 			<ul className="navbar__list">
 				<li className="navbar__item">
-					<Link to="/">Home</Link>
+					<Link className="navbar__link" to="/">
+						Home
+					</Link>
 				</li>
 				<li className="navbar__item">
-					<Link to="/shop">Shop</Link>
+					<Link className="navbar__link" to="/shop">
+						Shop
+					</Link>
 				</li>
 				<li className="navbar__item">
-					<Link to="/about">About</Link>
+					<Link className="navbar__link" to="/about">
+						About
+					</Link>
 				</li>
 				<li className="navbar__item">
-					<Link to="/blog">Blog</Link>
+					<Link className="navbar__link" to="/blog">
+						Blog
+					</Link>
 				</li>
 				<li className="navbar__item">
-					<Link to="/contact">Contact</Link>
+					<Link className="navbar__link" to="/contact">
+						Contact
+					</Link>
 				</li>
 			</ul>
+			<div className="bg-media"></div>
 		</nav>
 	);
 };

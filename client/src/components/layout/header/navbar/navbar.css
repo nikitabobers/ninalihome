@@ -21,11 +21,11 @@ nav ul li a:hover {
 	color: var(--color-grey);
 }
 
-nav.stroke ul li a {
+.navbar ul li a {
 	position: relative;
 }
 
-nav.stroke ul li a:after {
+.navbar li a:after {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -38,6 +38,6 @@ nav.stroke ul li a:after {
 	height: 1px;
 }
 
-nav.stroke ul li a:hover:after {
+.navbar li a:hover:after {
 	width: 100%;
 }
