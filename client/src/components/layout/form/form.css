@@ -21,3 +21,36 @@
 .grid--3 input {
 	width: 100%;
 }
+
+.form-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid var(--color-grey-light);
+	box-shadow: 0 0 20px var(--color-grey-light);
+	border-radius: 15px;
+	padding: 1.5rem 3rem;
+}
+
+.form--label {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	color: var(--color-grey);
+	margin-bottom: 1.5rem;
+	font-size: 0.9rem;
+}
+
+.form--label input,
+textarea {
+	color: var(--color-black);
+	border: 1px solid var(--color-grey-light);
+	min-height: 1.5rem;
+	font-size: 1rem;
+	font-family: sans-serif;
+	margin-top: 0.3rem;
+	padding: 0.3rem;
+}
+.form--label textarea {
+	min-height: 12rem;
+}

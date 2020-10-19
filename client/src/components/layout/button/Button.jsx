@@ -3,7 +3,10 @@ import "./button.css";
 
 const Button = ({ children, buttonStyle, onClick }) => {
 	return (
-		<button className={`btn ${buttonStyle}`} onClick={onClick}>
+		<button
+			className={`btn ${buttonStyle ? buttonStyle : ""}`}
+			onClick={onClick}
+		>
 			{children}
 		</button>
 	);
