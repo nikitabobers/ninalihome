@@ -59,3 +59,12 @@
 	font-size: 0.8rem;
 	font-weight: 300;
 }
+
+@media (max-width: 750px) {
+	.footer__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.footer__item-contact {
+		grid-column: auto;
+	}
+}

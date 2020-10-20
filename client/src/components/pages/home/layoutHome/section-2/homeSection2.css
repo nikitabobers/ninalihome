@@ -23,3 +23,31 @@
 	padding-left: 5rem;
 	font-size: 1.5rem;
 }
+
+@media (max-width: 800px) {
+	.section__two {
+		margin: 3rem auto;
+	}
+	.section__two .section--flex {
+		flex-direction: column;
+	}
+	.section__two--text {
+		padding: 0;
+		padding-top: 1rem;
+		text-align: center;
+	}
+	.section__two--grid {
+		grid-template-columns: 1fr;
+	}
+	.grid__item:last-child {
+		display: none;
+	}
+	.grid__item {
+		display: flex;
+		justify-content: center;
+	}
+	.grid__item img {
+		width: 70%;
+		height: 70%;
+	}
+}

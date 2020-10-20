@@ -21,14 +21,12 @@ const Header = () => {
 	if (address.includes("admin")) return null;
 
 	const handleClick = (e) => {
-		console.log(e.target);
 		if (
 			e.target.className === "bg-media" ||
 			e.target.className === "navbar__link" ||
 			e.target.className === "nav--icon_span" ||
 			e.target.className === "fas fa-shopping-bag fa-lg"
 		) {
-			console.log(e);
 			setOpenMenu(!openMenu);
 		}
 	};

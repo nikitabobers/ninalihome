@@ -7,7 +7,6 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 2rem;
-	/* height: 570px; */
 }
 .section__three--text {
 	text-align: center;
@@ -23,7 +22,6 @@
 	text-align: center;
 }
 .section__three img {
-	/* height: 700px; */
 	height: 100%;
 	width: 100%;
 }
@@ -31,5 +29,18 @@
 @media (min-width: 1024px) {
 	.section__three-item {
 		height: 90%;
+	}
+}
+@media (max-width: 800px) {
+	.section__three {
+		margin: 0;
+	}
+}
+@media (max-width: 600px) {
+	.section__three--grid {
+		grid-template-columns: 1fr;
+	}
+	.section__three-item:last-child {
+		display: none;
 	}
 }
