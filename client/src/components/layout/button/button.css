@@ -1,82 +1,91 @@
 .btn {
-	cursor: pointer;
-	border: none;
-	background: transparent;
-	font-weight: 700;
-	color: #333;
-	font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-weight: 700;
+  color: #333;
+  font-size: 1rem;
 }
 
 .btn a {
-	color: #fff;
+  color: #fff;
 }
 
 .btn--shop {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .btn--order {
-	margin: auto;
-	font-size: 1rem;
-	background: #333;
-	color: #fff;
-	padding: 0.7rem;
-	border-radius: 10px;
-	width: 100%;
+  margin: auto;
+  font-size: 1rem;
+  background: #333;
+  color: #fff;
+  padding: 0.7rem;
+  border-radius: 10px;
+  width: 100%;
 }
 
 .btn-shop a:hover {
-	color: #444;
+  color: #444;
 }
 
 .btn--order:hover {
-	color: #f4f4f4;
-	background: #444;
+  color: #f4f4f4;
+  background: #444;
 }
 
 .btn--remove {
-	position: relative;
-	color: var(--color-grey);
-	font-weight: 400;
-	transition: all 0.5s;
-	padding-bottom: 2px;
-	font-size: 0.9rem;
-	text-decoration: underline;
+  position: relative;
+  color: var(--color-grey);
+  font-weight: 400;
+  transition: all 0.5s;
+  padding-bottom: 2px;
+  font-size: 0.9rem;
+  text-decoration: underline;
 }
 
 .btn--remove:hover {
-	color: var(--color-hover-grey);
+  color: var(--color-grey-light);
 }
 
 .btn--black {
-	border-radius: 15px;
-	font-size: 1rem;
-	padding: 0.6rem 1rem;
-}
-.btn--black {
-	background: var(--color-black);
-	color: #fff;
+  border-radius: 15px;
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  background: var(--color-black);
+  color: #fff;
 }
 
 .btn--black:hover {
-	background: #333;
-	box-shadow: 0 0 4px var(--color-black);
+  box-shadow: 0 0 10px #999;
+}
+
+.btn--grey {
+  border-radius: 15px;
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  color: #222;
+}
+
+.btn--grey:hover {
+  box-shadow: 0 0 10px var(--color-grey-light);
 }
 
 .btn--link {
-	width: 100%;
-	display: block;
-	text-align: center;
+  width: 100%;
+  display: block;
+  text-align: center;
 }
 
 .btn--light {
-	font-weight: 500;
-	padding: 0.3rem 0.5rem;
-	border-radius: 10px;
-	background: var(--color-black);
-	color: #fff;
+  font-weight: 500;
+  padding: 0.3rem 0.5rem;
+  border-radius: 10px;
+  background: var(--color-black);
+  color: #fff;
 }
 
 .btn--light:hover {
-	background: #555;
+  background: #555;
 }
