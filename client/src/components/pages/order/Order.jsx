@@ -6,6 +6,7 @@ import { Loader } from "../../layout/loader/Loader";
 import { OrderItem } from "./orderItem/OrderItem";
 import { OrderShippingItem } from "./orderShippingItem/OrderShippingItem";
 import "./order.css";
+import { PayPalButton } from "../../layout/button/paypal/PayPalButton";
 
 function Order() {
   const cart = useSelector((state) => state.cart);
@@ -70,6 +71,7 @@ function Order() {
             <Link className="btn btn--grey btn--link" to="/cart">
               Back to Cart
             </Link>
+            <PayPalButton products={cartItems} price={total} />
           </div>
         </div>
       )}

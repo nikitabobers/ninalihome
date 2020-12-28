@@ -1,15 +1,17 @@
 import React from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
-const PayPalButton = () => {
+const PayPalButton = ({ products, price }) => {
+  const productNames = products.map((product) => product.name).join(", ");
+
   const createOrder = (data, actions) => {
     return actions.order.create({
       purchase_units: [
         {
-          description: "Item",
+          description: productNames,
           amount: {
-            currency_code: "USD",
-            value: "9.99",
+            currency_code: "EUR",
+            value: price,
           },
         },
       ],
@@ -21,9 +23,13 @@ const PayPalButton = () => {
   };
 
   return (
-    <PayPalScriptProvider options={{ "client-id": "sb" }}>
+    <PayPalScriptProvider
+      options={{
+        "client-id": process.env.REACT_APP_PAYPAL_KEY,
+        currency: "EUR",
+      }}
+    >
       <PayPalButtons
-        style={{ layout: "horizontal" }}
         createOrder={(data, actions) => createOrder(data, actions)}
         onApprove={(data, actions) => onApprove(data, actions)}
       />

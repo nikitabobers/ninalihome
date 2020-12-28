@@ -34,3 +34,4 @@ data.json
 *.jpg
 /images
 /*.env
+.env
