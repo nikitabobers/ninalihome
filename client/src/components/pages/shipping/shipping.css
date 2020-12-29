@@ -1,60 +1,69 @@
 .shipping__section {
-	max-width: 1000px;
-	min-height: 93vh;
-	margin: auto;
-	padding: 2rem 0;
-	display: grid;
-	grid-template-columns: 65% auto;
-	grid-gap: 3rem;
+  max-width: 1000px;
+  min-height: 93vh;
+  margin: auto;
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: 65% auto;
+  grid-gap: 3rem;
 }
 
 .shipping__method {
-	margin: 1rem 0 1rem 0;
-	padding: 1rem 0 1.5rem 0;
-	border-bottom: 1px solid var(--color-grey-light);
-	border-top: 1px solid var(--color-grey-light);
+  margin: 1rem 0 1rem 0;
+  padding: 1rem 0 1.5rem 0;
+  border-bottom: 1px solid var(--color-grey-light);
+  border-top: 1px solid var(--color-grey-light);
 }
 
 .shipping__method h2 {
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .shipping__method--form {
-	position: relative;
-	display: flex;
-	width: 50%;
+  position: relative;
+  display: flex;
+  width: 50%;
 }
 
 .form--shipping .select {
-	background: none;
-	border: var(--color-grey-light) 1px solid;
-	padding: 0.3rem;
-	margin: 0.3rem 0 0 0;
-	width: 100%;
+  background: none;
+  border: var(--color-grey-light) 1px solid;
+  padding: 0.3rem;
+  margin: 0.3rem 0 0 0;
+  width: 100%;
 }
 .form--shipping .btn {
-	width: 200px;
+  width: 200px;
 }
 
 .input--error {
-	border: 1px solid red;
+  border: 1px solid red;
 }
 
 .order--label-radio {
-	flex-direction: row;
-	align-items: center;
+  flex-direction: row;
+  align-items: center;
 }
 
 .order--label-radio:not(:first-child) {
-	margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 .order--label-radio input {
-	margin: 0 0.6rem 0 0;
+  margin: 0 0.6rem 0 0;
 }
 
 .order--label-radio .error--message {
-	position: absolute;
-	bottom: -20px;
-	left: 0;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+
+@media (max-width: 700px) {
+  .shipping__section {
+    grid-template-columns: 1fr;
+  }
+  .form--shipping .btn {
+    width: 100%;
+  }
 }
