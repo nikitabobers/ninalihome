@@ -25,7 +25,8 @@ const PayPalButton = ({ products, price }) => {
   return (
     <PayPalScriptProvider
       options={{
-        "client-id": process.env.REACT_APP_PAYPAL_KEY,
+        "client-id":
+          "AXGbuPI_89LUAA9hOnfG9F4uudj1fEwWczKGI7xzspyJgKDWg_MC72DnyNLq_bDPP-8asMpkLLIUd6pR",
         currency: "EUR",
       }}
     >
